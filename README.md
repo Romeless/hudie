@@ -6,11 +6,13 @@ This app serves as a shop for custom shirt and jacket, with the option to design
 
 # Program Backlog
 
+progress :white_check_mark: - :heavy_check_mark:
+
 | Stack | Priority | Progress |
 | --- | --- | :-: |
-| sign up | high | - |
-| log in  | high | - |
-| buat custom design | high | - |
-| save custom design | med | - |
-| submit & send custom jacket | high | - |
-| edit informasi user | med | - |
+| sign up | high | :white_check_mark: |
+| log in  | high | :white_check_mark: |
+| buat custom design | high | :white_check_mark: |
+| save custom design | med | :white_check_mark: |
+| submit & send custom jacket | high | :white_check_mark: |
+| edit informasi user | med | :white_check_mark: |
