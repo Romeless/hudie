@@ -25,6 +25,6 @@ progress :white_check_mark: - :heavy_check_mark:
 | 13 | Member | Design my own jacket | i can design my jacket | High | |
 | 14 | Member | Order my design | i can order my design | High | |
 | 15 | Member | Log Out | i can log out of app | High | |
-| 26 | Member | Save my design | i can save my design | Medium | | 
-| 27 | Member | Edit my saved design | i can edit my saved design | Medium | |
-| 28 | Member | Chat at the admin/shop | i can contact them | Low | |
+| 17 | Member | Save my design | i can save my design | Medium | | 
+| 18 | Member | Edit my saved design | i can edit my saved design | Medium | |
+| 19 | Member | Chat at the admin/shop | i can contact them | Low | |
