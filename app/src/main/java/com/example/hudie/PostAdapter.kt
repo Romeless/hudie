@@ -15,7 +15,7 @@ class PostAdapter (private val list: ArrayList<PostResponse>): RecyclerView.Adap
             with(itemView)
             {
                 val text ="id: ${postResponse.id}\n" +
-                        "username: ${postResponse.username}"
+                        "title: ${postResponse.title}"
                 tvText.text = text
             }
         }
