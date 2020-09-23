@@ -1,5 +1,8 @@
 package com.example.hudie
 
-data class PostResponse(val id: String?) {
-    val username: String? = null
-}
+import com.google.gson.annotations.SerializedName
+
+data class PostResponse(
+    @SerializedName("id") val id: String,
+    @SerializedName("username") val username: String
+ )

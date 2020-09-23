@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
 
-    private const val BASE_URL = "http://localhost/"
+    private const val BASE_URL = "10.0.2.2"
 
 
     val instance : HudieApi by lazy {
