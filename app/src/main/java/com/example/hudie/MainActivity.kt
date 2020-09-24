@@ -1,6 +1,9 @@
 package com.example.hudie
 
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,27 +23,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var setting = getSharedPreferences("Hudie", 0);
+        var editor = setting.edit();
 
-        rvPost.setHasFixedSize(true)
-        rvPost.layoutManager = LinearLayoutManager(this)
+        var localtoken = setting.getString("token", " ").toString();
+        var servertoken = Models();
+
+        var intent:Intent;
 
 
-        RetrofitClient.instance.getUsers().enqueue(object : Callback<ArrayList<PostResponse>> {
-            override fun onFailure(call: Call<ArrayList<PostResponse>>, t: Throwable) {
+        intent = if (localtoken != servertoken.getToken()){
+            Intent(this, LoginActivity::class.java);
+        } else{
+            Intent(this, Home::class.java);
+        }
+        startActivity(intent);
+        finish();
 
-            }
-
-            override fun onResponse(
-                call: Call<ArrayList<PostResponse>>,
-                response: Response<ArrayList<PostResponse>>
-            ) {
-                val responseCode = response.code().toString()
-                tvResponseCode.text = responseCode
-                response.body()?.let { list.addAll(it) }
-                val adapter = PostAdapter(list)
-                rvPost.adapter = adapter
-            }
-
-        })
     }
 }
