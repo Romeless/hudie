@@ -67,6 +67,7 @@ class Register : AppCompatActivity() {
                     response: Response<UserResponse>
                 ) {
                     Toast.makeText(applicationContext, response.body()?.username, Toast.LENGTH_LONG).show()
+                    TODO("Not yet implemented")
                 }
 
                 override fun onFailure(call: Call<UserResponse>, t: Throwable) {
