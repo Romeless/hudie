@@ -1,23 +1,16 @@
-package com.example.hudie
+package com.example.hudie.activities
 
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_main.*
-import org.w3c.dom.Text
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import com.example.hudie.models.Models
+import com.example.hudie.R
+import com.example.hudie.models.UserResponse
 
 
 class MainActivity : AppCompatActivity() {
 
-    private val list =  ArrayList<PostResponse>()
+    private val list =  ArrayList<UserResponse>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

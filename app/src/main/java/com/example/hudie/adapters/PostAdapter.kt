@@ -1,21 +1,23 @@
-package com.example.hudie
+package com.example.hudie.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hudie.R
+import com.example.hudie.models.UserResponse
 import kotlinx.android.synthetic.main.item_post.view.*
 
-class PostAdapter (private val list: ArrayList<PostResponse>): RecyclerView.Adapter<PostAdapter.PostViewHolder>()
+class PostAdapter (private val list: ArrayList<UserResponse>): RecyclerView.Adapter<PostAdapter.PostViewHolder>()
 {
     inner class PostViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
     {
-        fun bind(postResponse: PostResponse)
+        fun bind(userData: UserResponse)
         {
             with(itemView)
             {
-                val text ="id: ${postResponse.id}\n" +
-                        "title: ${postResponse.title}"
+                val text ="id: ${userData.id}\n" +
+                        "title: ${userData.username}"
                 tvText.text = text
             }
         }

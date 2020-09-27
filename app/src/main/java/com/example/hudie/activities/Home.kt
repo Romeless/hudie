@@ -1,7 +1,8 @@
-package com.example.hudie
+package com.example.hudie.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.hudie.R
 
 class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,9 +1,10 @@
-package com.example.hudie
+package com.example.hudie.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.example.hudie.R
 
 /**
  * A Login Form Example in Kotlin Android
@@ -22,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
         // get reference to all views
         val etUsername = findViewById<EditText>(R.id.et_user_name)
         val etPassword = findViewById<EditText>(R.id.et_password)
-        val btngotoregister = findViewById<Button>(R.id.goto_register);
+        val btnGoToRegister = findViewById<Button>(R.id.goto_register);
         val btnSubmit = findViewById<Button>(R.id.btn_submit)
 
 
@@ -36,9 +37,11 @@ class LoginActivity : AppCompatActivity() {
 
             // your code to validate the user_name and password combination
             // and verify the same
+
+
         }
 
-        btngotoregister.setOnClickListener{
+        btnGoToRegister.setOnClickListener{
             val intent : Intent = Intent(this, Register::class.java);
             startActivity(intent);
             finish();

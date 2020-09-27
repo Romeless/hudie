@@ -1,4 +1,4 @@
-package com.example.hudie
+package com.example.hudie.models
 
 class Models {
     public fun getToken():String{
