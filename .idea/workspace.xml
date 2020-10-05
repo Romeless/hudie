@@ -9,11 +9,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5047dba3-46fa-4e48-950b-81cb3e6fa962" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/activities/Home.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/activities/Home.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/api/HudieApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/api/HudieApi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
+    <list default="true" id="5047dba3-46fa-4e48-950b-81cb3e6fa962" name="Default Changelist" comment="Implement The Rest of Connection API">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +71,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -212,10 +210,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="639" y="98" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1601891008638" />
-    <state x="747" y="266" key="FileChooserDialogImpl" timestamp="1600745092206">
+    <state x="747" y="266" key="FileChooserDialogImpl" timestamp="1601891183178">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="747" y="266" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1600745092206" />
+    <state x="747" y="266" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1601891183178" />
     <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1600833850998">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
@@ -244,10 +242,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="639" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1600737442917" />
-    <state x="752" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601890776794">
+    <state x="752" y="442" width="406" height="159" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601895690812">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="752" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1044@0.0.1920.1044" timestamp="1601890776794" />
+    <state x="752" y="442" width="406" height="159" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1044@0.0.1920.1044" timestamp="1601895690812" />
     <state x="1209" y="239" key="org.jetbrains.kotlin.idea.testIntegration.KotlinCreateTestDialog" timestamp="1600747278877">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
