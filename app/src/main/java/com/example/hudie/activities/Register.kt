@@ -60,7 +60,7 @@ class Register : AppCompatActivity() {
             }
 
             RetrofitClient.instance.createUser(
-                username_value,password_value,email_value,fullname_value
+                username_value,password_value,email_value,fullname_value,null, null, null
             ).enqueue(object: Callback<UserResponse>{
                 override fun onResponse(
                     call: Call<UserResponse>,

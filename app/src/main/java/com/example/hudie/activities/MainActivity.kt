@@ -25,10 +25,10 @@ class MainActivity : AppCompatActivity() {
         var intent:Intent;
 
 
-        intent = if (localtoken != servertoken.getToken()){
+        intent = if (localtoken != " "){
             Intent(this, LoginActivity::class.java);
         } else{
-            Intent(this, Home::class.java);
+            Intent(this, Home_new::class.java);
         }
         startActivity(intent);
         finish();

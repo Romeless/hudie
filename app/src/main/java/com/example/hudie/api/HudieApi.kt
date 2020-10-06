@@ -1,5 +1,6 @@
 package com.example.hudie.api
 
+import com.example.hudie.models.TokenResponse
 import com.example.hudie.models.UserResponse
 import retrofit2.Call
 import retrofit2.http.Field
@@ -31,7 +32,7 @@ interface HudieApi {
     fun login(
         @Field("username") username: String,
         @Field("password") password: String
-    )
+    ): Call<TokenResponse>
 
     @POST("users/googleAuth")
     @FormUrlEncoded
@@ -41,5 +42,5 @@ interface HudieApi {
         @Field("googleID") googleID: String,
         @Field("email") email: String,
         @Field("device") device: String?
-    )
+    ): Call<UserResponse>
 }
