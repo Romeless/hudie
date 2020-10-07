@@ -38,7 +38,9 @@ progress :white_check_mark: - :heavy_check_mark:
 ## Sprint Backlog
 
 ### Sprint 2
+
 | ID | Assigned | Details | Progress |
+| :-: | --- | --- | --- |
 | 7 | Rama | API Connection | DONE |
 | 7 | Luthfi | Activity | Progress |
 | 8 | Rama | API Connection | DONE |
