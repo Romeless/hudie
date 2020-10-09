@@ -14,6 +14,11 @@ class Home_new : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_new)
+
+        window.statusBarColor = getColor(R.color.royalblue);
+        window.navigationBarColor = getColor(R.color.royalblue);
+        supportActionBar?.hide();
+
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment)
