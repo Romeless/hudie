@@ -9,7 +9,7 @@ An android app of the private start-up business kustome, dealing with custom shi
 ## Business Model
 This app serves as a shop for custom shirt and jacket, with the option to design the user's own design.
 
-## Product Backlog Backlog
+## Product Backlog
 
 | ID | Priority | Product Backlog Item       | User Story                                                                       |
 |----|----------|----------------------------|----------------------------------------------------------------------------------|
