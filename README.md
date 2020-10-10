@@ -13,45 +13,36 @@ This app serves as a shop for custom shirt and jacket, with the option to design
 
 progress :white_check_mark: - :heavy_check_mark:
 
-| ID | As a... | I want to... | so that... | Sprint | Progress |
-| :-: | --- | --- | --- | --- | :-: |
-| 1 | Administrator | Look at member page | i can look at it | 5 |  |
-| 2 | Administrator | Log out | i can log out | 3 | |
-| 3 | Administrator | Look at member's order | i can process it | 4 | |
-| 4 | Administrator | Accept/process member's order | i can accept order | 4 | |
-| 5 | Administrator | Reject member's order | i can reject order | 4 | |
-| 6 | Administrator | Monitor user member | i can ban rulebreaker | 5 | |
-| 7 | Visitor | Register | i can create an account | 2 | TODO |
-| 8 | Visitor | Log In  | log in as member/admin | 2 | TODO |
-| 9 | Visitor | Look at template design | i can see example design | 3 | |
-| 10 | Visitor | Look at Terms and Service | said no one ever | 5 |  |
-| 11 | Member | Check at my user page | i can see/edit my info | 5 | |
-| 12 | Member | Edit my own information | i can edit my full | 5 | |
-| 13 | Member | Design my own jacket | i can design my jacket | 3 | |
-| 14 | Member | Order my design | i can order my design | 3 | |
-| 15 | Member | Log Out | i can log out of app | 3 | |
-| 17 | Member | Save my design | i can save my design | 3 | | 
-| 18 | Member | Edit my saved design | i can edit my saved design | 4 | |
-| 19 | Member | Chat at the admin/shop | i can contact them | 5 | |
-| 20 | Member | Navigate the app | i can use the app | 3 | |
+| ID | Priority | Product Backlog Item       | User Story                                                                       | Progress    |
+|----|----------|----------------------------|----------------------------------------------------------------------------------|-------------|
+| 1  | 1        | Login to the application   | As an unauthorized member, I want to login to my account                         | In Progress |
+| 2  | 2        | Register a new account     | As an unauthorized user, I want to register a new account with my Google Account | In Progress |
+| 3  | 3        | Home of the application    | As a user, I want to able to navigate between the different pages of the app     | TODO        |
+| 4  | 4        | Custom Design Activity     | As a user, I want to design my own product as promised by the app                | TODO        |
+| 5  | 5        | Order Design               | As a user, I want to order my design or the design in the app                    | TODO        |
+| 6  | 6        | Order Confirmation         | As an admin, I want to confirm or reject an order                                | TODO        |
+| 7  | 7        | Design Shop Activity       | As a user, I want to see complete designs offered by the app                     | TODO        |
+| 8  | 8        | Profile Information        | As a user, I want to see my profile information                                  | TODO        |
+| 9  | 9        | Profile Information Change | As a user, I want to change my profile information                               | TODO        |
+| 10 | 10       | Login with Google          | As an unauthorized user, I want to login with my Google Account                  | TODO        |
+| 11 | 11       | Register with Google       | As an unauthorized user, I want to register a new account with my Google Account | TODO        |
+| 12 | 12       | Shop Search System         | As a user, I want to search for a design by my criteria                          | TODO        |
+| 13 | 13       | Edit existing design       | As a user, I want to edit an existing design                                     | TODO        |
+| 14 | 14       | Log Out                    | As a user, I want to log out of the application                                  | TODO        |
+| 15 | 15       | Ban / Monitor User         | As an admin, I want to monitor other user                                        | TODO        |
+
 
 ## Sprint Backlog
 
-### Sprint 2
-
-| ID | Assigned | Details | Progress |
-| :-: | --- | --- | --- |
-| 7 | Luthfi | Activity | Progress |
-| 8 | Luthfi | Activity | Progress |
-
 ### Sprint 3
-| ID | Assigned | Details | Progress |
-| :-: | --- | --- | --- |
-| 2 | --- | --- | TODO |
-| 9 | --- | --- | TODO |
-| 8 | --- | --- | TODO |
-| 12 | --- | --- | TODO |
-| 14 | --- | --- | TODO |
-| 15 | --- | --- | TODO |
-| 17 | --- | --- | TODO |
-| 20 | --- | --- | TODO |
+
+| ID | Tasks                               | Taker        | Progress |
+|----|-------------------------------------|--------------|----------|
+| 1  | Login to the application            | -            | -        |
+|    | Login Activity Class                | In Progress  | Rama     |
+|    | Login Activity Class XML            | In Progress  | Luthfi   |
+|    | Connecting Login Activity to API    | TODO  |      |
+| 2  | Register a new account              | -     | -        |
+|    | Register Activity Class             | TODO  |      |
+|    | Register Activity XML               | TODO  |    |
+|    | Connecting Register Activity to API | TODO  |      |
