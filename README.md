@@ -6,12 +6,15 @@ An android app of the private start-up business Hudie, dealing with custom shirt
 - 1313617019 / [Fachry Muhammad](https://github.com/FachryMuhammad)
 - 1313617033 / [Muhammad Luthfi Albiansyah](https://github.com/LLuthfiY)
 
+## Team
+- 1313617011 / [Rama Lesmana](https://github.com/Romeless) **(Group Leader)**
+- 1313617019 / [Fachry Muhammad](https://github.com/FachryMuhammad)
+- 1313617033 / [Muhammad Luthfi Albiansyah](https://github.com/LLuthfiY)
+
 ## Business Model
 This app serves as a shop for custom shirt and jacket, with the option to design the user's own design.
 
 ## Product Backlog
-
-progress :white_check_mark: - :heavy_check_mark:
 
 | ID | Priority | Product Backlog Item       | User Story                                                                       | Status      |
 |----|----------|----------------------------|----------------------------------------------------------------------------------|-------------|
@@ -33,22 +36,10 @@ progress :white_check_mark: - :heavy_check_mark:
 
 ## Sprint Backlog
 
-### Sprint 4
+### Sprint 5
 
 | ID | Tasks                               | Taker       | Progress |
 |----|-------------------------------------|-------------|----------|
-| 1  | Login to the application            | \-          | \-       |
-|    | Login Activity Class                | DONE        | Rama     |
-|    | Login Activity Class XML            | DONE        | Luthfi   |
-|    | Connecting Login Activity to API    | DONE        | Rama     |
-| 2  | Register a new account              | \-          | \-       |
-|    | Register Activity Class             | DONE        | Rama     |
-|    | Register Activity XML               | DONE        | Luthfi   |
-|    | Connecting Register Activity to API | DONE        | Rama     |
-| 3  | Home of the application             | \-          | \-       |
-|    | Navigation Bottom Menu XML          | DONE        | Rama     |
-|    | Main Activity Class                 | DONE        | Luthfi   |
-|    | Main Activity View                  | DONE        | Luthfi   |
 | 4  | Custom Design Activity              | \-          | \-       |
 |    | Design Jacket Class                 | TODO        |          |
 |    | Design Jacket View                  | TODO        |          |
