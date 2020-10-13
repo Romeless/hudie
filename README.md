@@ -6,11 +6,6 @@ An android app of the private start-up business Hudie, dealing with custom shirt
 - 1313617019 / [Fachry Muhammad](https://github.com/FachryMuhammad)
 - 1313617033 / [Muhammad Luthfi Albiansyah](https://github.com/LLuthfiY)
 
-## Team
-- 1313617011 / [Rama Lesmana](https://github.com/Romeless) **(Group Leader)**
-- 1313617019 / [Fachry Muhammad](https://github.com/FachryMuhammad)
-- 1313617033 / [Muhammad Luthfi Albiansyah](https://github.com/LLuthfiY)
-
 ## Business Model
 This app serves as a shop for custom shirt and jacket, with the option to design the user's own design.
 
