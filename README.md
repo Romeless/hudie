@@ -33,7 +33,7 @@ This app serves as a shop for custom shirt and jacket, with the option to design
 
 ### Sprint 4
 
-| ID | Tasks                               | Taker       | Progress |
+| ID | Tasks                               | Progress       | Taker |
 |----|-------------------------------------|-------------|----------|
 | 1  | Login to the application            | \-          | \-       |
 |    | Login Activity Class                | DONE        | Rama     |
