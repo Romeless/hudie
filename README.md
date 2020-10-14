@@ -32,12 +32,6 @@ This app serves as a shop for custom shirt and jacket, with the option to design
 ## Sprint Backlog
 
 ### Sprint 4
-| ID | Assigned | Details | Progress |
-| :-: | --- | --- | --- |
-| 3 | --- | --- | TODO |
-| 4 | --- | --- | TODO |
-| 5 | --- | --- | TODO |
-| 18 | --- | --- | TODO |
 
 | ID | Tasks                               | Taker       | Progress |
 |----|-------------------------------------|-------------|----------|
