@@ -33,7 +33,7 @@ This app serves as a shop for custom shirt and jacket, with the option to design
 
 ### Sprint 5
 
-| ID | Tasks                               | Taker       | Progress |
+| ID | Tasks                               | Progress       | Taker |
 |----|-------------------------------------|-------------|----------|
 | 4  | Custom Design Activity              | \-          | \-       |
 |    | Design Jacket Class                 | TODO        |          |
