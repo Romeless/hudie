@@ -8,5 +8,6 @@ data class TokenResponse(
     val username: String,
     val device: String,
     @SerializedName("createDate") val create_date: String,
-    @SerializedName("expireDate") val expire_date: String
+    @SerializedName("expireDate") val expire_date: String,
+    val admin: Int? = 0
 )

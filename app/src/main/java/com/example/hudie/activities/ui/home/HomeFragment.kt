@@ -9,10 +9,15 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.hudie.R
+import com.example.hudie.activities.ui.dashboard.DashboardFragment
 
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
+
+    companion object {
+        fun newInstance(): HomeFragment = HomeFragment();
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

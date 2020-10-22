@@ -9,10 +9,15 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.hudie.R
+import com.example.hudie.activities.ui.home.HomeFragment
 
 class NotificationsFragment : Fragment() {
 
     private lateinit var notificationsViewModel: NotificationsViewModel
+
+    companion object {
+        fun newInstance(): NotificationsFragment = NotificationsFragment();
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

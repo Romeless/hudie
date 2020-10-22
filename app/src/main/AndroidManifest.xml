@@ -12,10 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.Home_new"
+            android:name=".activities.Home"
             android:label="@string/title_activity_home_new"></activity>
         <activity android:name=".activities.Register" />
-        <activity android:name=".activities.Home" />
         <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>

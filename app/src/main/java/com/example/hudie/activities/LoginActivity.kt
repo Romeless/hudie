@@ -1,6 +1,7 @@
 package com.example.hudie.activities
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -31,16 +32,16 @@ class LoginActivity : AppCompatActivity() {
         // get reference to all views
         val etUsername = findViewById<EditText>(R.id.et_user_name)
         val etPassword = findViewById<EditText>(R.id.et_password)
-        val btnGoToRegister = findViewById<Button>(R.id.goto_register);
+        val btnGoToRegister = findViewById<Button>(R.id.goto_register)
         val btnSubmit = findViewById<Button>(R.id.btn_submit)
 
-
-
+        val device = Build.DEVICE
 
         // set on-click listener
         btnSubmit.setOnClickListener {
-            val username = etUsername.text.toString();
-            val password = etPassword.text.toString();
+            val username = etUsername.text.toString()
+            val password = etPassword.text.toString()
+
             if(username.isEmpty()) {
                 etUsername.error = "Username required"
                 etUsername.requestFocus()
@@ -52,21 +53,28 @@ class LoginActivity : AppCompatActivity() {
                 etPassword.requestFocus()
                 return@setOnClickListener
             }
+
             RetrofitClient.instance.login(
-                username,password
+                username,password,device
             ).enqueue(object: Callback<TokenResponse> {
                 override fun onResponse(
                     call: Call<TokenResponse>,
                     response: Response<TokenResponse>
                 ) {
-                    Log.i("masuk", response.body().toString())
+                    Log.i("Log In #1", response.body().toString())
+
                     val token = response.body()?.token.toString();
                     val username = response.body()?.username.toString()
+                    val id: String = response.body()?.user_id.toString()
+                    val role: String = response.body()?.admin.toString()
+
                     var setting = getSharedPreferences("Hudie", 0);
                     var editor = setting.edit();
 
-                    editor.putString("token", token);
-                    editor.putString("username", username);
+                    editor.putString("token", token)
+                    editor.putString("username", username)
+                    editor.putString("user_id", id)
+                    editor.putString("role", role)
 
                     val intent = Intent(this@LoginActivity, MainActivity::class.java);
                     startActivity(intent);

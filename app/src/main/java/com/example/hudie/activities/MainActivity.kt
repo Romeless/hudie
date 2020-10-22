@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         intent = if (localtoken != " "){
             Intent(this, LoginActivity::class.java);
         } else{
-            Intent(this, Home_new::class.java);
+            Intent(this, Home::class.java);
         }
         startActivity(intent);
         finish();

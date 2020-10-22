@@ -23,9 +23,9 @@ interface HudieApi {
         @Field("password") password: String,
         @Field("email") email: String,
         @Field("fullName") fullname: String,
-        @Field("avatar") avatar: String?,
-        @Field("address") address: String?,
-        @Field("phoneNumber") phone_number: String?
+        @Field("avatar") avatar: String? = null,
+        @Field("address") address: String? = null,
+        @Field("phoneNumber") phone_number: String? = null
     ): Call<UserResponse>
 
     @POST("users/login")
@@ -33,7 +33,7 @@ interface HudieApi {
     fun login(
         @Field("username") username: String,
         @Field("password") password: String,
-        @Field("device") device: String?
+        @Field("device") device: String? = null
     ): Call<TokenResponse>
 
     @POST("users/googleAuth")
@@ -43,7 +43,7 @@ interface HudieApi {
         @Field("fullName") full_name: String,
         @Field("googleID") google_ID: String,
         @Field("email") email: String,
-        @Field("device") device: String?
+        @Field("device") device: String? = null
     ): Call<UserResponse>
 
     // ********************************************
@@ -59,9 +59,9 @@ interface HudieApi {
         @Field("userId") user_id: Int,
         @Field("designName") design_name: String,
         @Field("details") details: String,
-        @Field("images") images: String?,
-        @Field("imagesPosition") images_position: String?,
-        @Field("information") information: String?,
+        @Field("images") images: String? = null,
+        @Field("imagesPosition") images_position: String? = null,
+        @Field("information") information: String? = null,
         @Field("price") price: Int,
         @Field("share") share: Int
     ): Call<DesignResponse>
