@@ -53,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             RetrofitClient.instance.login(
-                username,password
+                username,password,""
             ).enqueue(object: Callback<TokenResponse> {
                 override fun onResponse(
                     call: Call<TokenResponse>,
