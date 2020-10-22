@@ -192,7 +192,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_margin="20dp"
-                android:checkedButton="@id/navy">
+                android:checkedButton="@id/kepala1">
 
                 <RadioButton
                     android:id="@+id/kepala1"
@@ -227,7 +227,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_margin="20dp"
-                android:checkedButton="@id/navy">
+                android:checkedButton="@id/tangan1">
 
                 <RadioButton
                     android:id="@+id/tangan1"
@@ -269,7 +269,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_margin="20dp"
-                android:checkedButton="@id/navy">
+                android:checkedButton="@id/badan1">
 
                 <RadioButton
                     android:id="@+id/badan1"
