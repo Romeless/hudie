@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/romeless/AndroidStudioProjects/Hudie/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/romeless/.gradle/caches/transforms-2/files-2.1/4e039017508058e03141616af225b4eb/appcompat-1.2.0/res/values-v24/values-v24.xml",
+                    "source": "/home/romeless/.gradle/caches/transforms-2/files-2.1/4294b64d0372e37107d94a132048e96e/appcompat-1.2.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
