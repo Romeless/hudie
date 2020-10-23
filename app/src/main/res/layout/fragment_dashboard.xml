@@ -151,14 +151,15 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_margin="20dp"
-                android:checkedButton="@id/navy">
+                android:checkedButton="@id/grey">
 
                 <RadioButton
                     android:id="@+id/navy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="Navy" />
+                    android:text="Navy"
+                    />
 
                 <RadioButton
                     android:id="@+id/grey"
@@ -208,7 +209,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="type 2" />
+                    android:text="Type 2" />
             </RadioGroup>
 
             <View
@@ -243,14 +244,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="type 2" />
+                    android:text="Type 2" />
 
                 <RadioButton
                     android:id="@+id/tangan3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="type 3" />
+                    android:text="Type 3" />
             </RadioGroup>
 
             <View
