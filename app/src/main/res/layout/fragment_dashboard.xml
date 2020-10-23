@@ -26,6 +26,7 @@
             app:layout_constraintRight_toRightOf="@id/images"
             android:src="@drawable/kepala1_grey"
             />
+
         <ImageView
             android:id="@+id/imagesOfbody"
             android:layout_width="120dp"
@@ -35,6 +36,7 @@
             app:layout_constraintRight_toRightOf="@id/images"
             android:src="@drawable/badan1_grey"
             />
+
         <ImageView
             android:id="@+id/imagesOflefthand"
             android:layout_width="90dp"

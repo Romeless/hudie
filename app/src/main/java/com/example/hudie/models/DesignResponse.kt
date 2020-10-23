@@ -12,5 +12,6 @@ data class DesignResponse(
     val share: Int,
     val price: Int,
     @SerializedName("createDate") val create_date: String? = null,
-    @SerializedName("updateDate")  val update_date: String? = null
+    @SerializedName("updateDate")  val update_date: String? = null,
+    val username: String? = null
 )

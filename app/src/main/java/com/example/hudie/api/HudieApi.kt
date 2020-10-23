@@ -51,7 +51,7 @@ interface HudieApi {
     // ********************************************
 
     @GET("designs")
-    fun getDesigns(): Call<DesignResponse>
+    fun getDesigns(): Call<ArrayList<DesignResponse>>
 
     @POST("designs/create")
     @FormUrlEncoded

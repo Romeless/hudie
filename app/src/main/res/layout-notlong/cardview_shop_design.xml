@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp" >
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/design_image"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/design_title"
+            android:layout_toEndOf="@+id/design_image"
+            android:layout_toRightOf="@+id/design_image"
+            android:layout_alignParentTop="true"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/design_creator"
+            android:layout_toEndOf="@+id/design_image"
+            android:layout_toRightOf="@+id/design_image"
+            android:layout_below="@+id/design_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/design_detail"
+            android:layout_toEndOf="@+id/design_image"
+            android:layout_toRightOf="@+id/design_image"
+            android:layout_below="@+id/design_creator" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
