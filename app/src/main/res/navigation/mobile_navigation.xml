@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.hudie.activities.ui.home.HomeFragment"
+        android:name="com.example.hudie.activities.ui.shop.ShopFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_shop" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.hudie.activities.ui.dashboard.DashboardFragment"
+        android:name="com.example.hudie.activities.ui.design.DesignFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_design" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.hudie.activities.ui.notifications.NotificationsFragment"
+        android:name="com.example.hudie.activities.ui.profile.ProfileFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_profile" />
 </navigation>

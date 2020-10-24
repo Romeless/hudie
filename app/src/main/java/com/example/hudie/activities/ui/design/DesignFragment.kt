@@ -1,6 +1,5 @@
-package com.example.hudie.activities.ui.dashboard
+package com.example.hudie.activities.ui.design
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,12 +10,11 @@ import android.widget.RadioGroup
 import androidx.fragment.app.Fragment
 //import androidx.lifecycle.ViewModelProviders
 import com.example.hudie.R
-import com.example.hudie.api.RetrofitClient
 
-class DashboardFragment : Fragment() {
+class DesignFragment : Fragment() {
 
     companion object {
-        fun newInstance(): DashboardFragment = DashboardFragment();
+        fun newInstance(): DesignFragment = DesignFragment();
     }
 
     override fun onCreateView(
@@ -26,7 +24,7 @@ class DashboardFragment : Fragment() {
     ): View? {
         //dashboardViewModel = ViewModelProviders.of(this).get(DashboardViewModel::class.java)
 
-        val view = inflater.inflate(R.layout.fragment_dashboard, container, false)
+        val view = inflater.inflate(R.layout.fragment_design, container, false)
         val submitButton: Button = view.findViewById<Button>(R.id.submit_design)
 
         val size: RadioGroup = view.findViewById<RadioGroup>(R.id.size)

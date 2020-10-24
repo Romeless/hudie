@@ -4,14 +4,10 @@ import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import com.example.hudie.R
-import com.example.hudie.activities.ui.dashboard.DashboardFragment
-import com.example.hudie.activities.ui.home.HomeFragment
-import com.example.hudie.activities.ui.notifications.NotificationsFragment
+import com.example.hudie.activities.ui.design.DesignFragment
+import com.example.hudie.activities.ui.shop.ShopFragment
+import com.example.hudie.activities.ui.profile.ProfileFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class Home : AppCompatActivity() {
@@ -19,17 +15,17 @@ class Home : AppCompatActivity() {
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item
         -> when(item.itemId) {
             R.id.navigation_shop -> {
-                val hFragment = HomeFragment.newInstance()
+                val hFragment = ShopFragment.newInstance()
                 replaceFragment(hFragment)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_design -> {
-                val dFragment = DashboardFragment.newInstance()
+                val dFragment = DesignFragment.newInstance()
                 replaceFragment(dFragment)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_profile -> {
-                val sFragment = NotificationsFragment.newInstance()
+                val sFragment = ProfileFragment.newInstance()
                 replaceFragment(sFragment)
                 return@OnNavigationItemSelectedListener true
             }

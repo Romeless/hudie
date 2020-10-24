@@ -1,16 +1,16 @@
-package com.example.hudie.activities.ui.dashboard
+package com.example.hudie.activities.ui.design
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class DesignViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is dashboard Fragment"
     }
     val text: LiveData<String> = _text
 
-    private var dashboardFragment: DashboardFragment? = null
+    private var dashboardFragment: DesignFragment? = null
 
 }

@@ -4,17 +4,14 @@ import com.example.hudie.models.DesignResponse
 import com.example.hudie.models.TokenResponse
 import com.example.hudie.models.UserResponse
 import retrofit2.Call
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface HudieApi {
     @GET("users")
     fun getUsers(): Call<ArrayList<UserResponse>>
 
     @GET("users/show/{id}")
-    fun showUser(): Call<UserResponse>
+    fun showUser(@Path("id") id: Int): Call<UserResponse>
 
     @POST("users/create")
     @FormUrlEncoded
@@ -65,4 +62,7 @@ interface HudieApi {
         @Field("price") price: Int,
         @Field("share") share: Int
     ): Call<DesignResponse>
+
+    @GET("designs/user/{id}")
+    fun userDesign(@Path("id") userID: Int): Call<ArrayList<DesignResponse>>
 }

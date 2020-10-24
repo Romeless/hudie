@@ -1,4 +1,4 @@
-package com.example.hudie.activities.ui.notifications
+package com.example.hudie.activities.ui.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,14 +9,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.hudie.R
-import com.example.hudie.activities.ui.home.HomeFragment
 
-class NotificationsFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: NotificationsViewModel
+    private lateinit var notificationsViewModel: ProfileViewModel
 
     companion object {
-        fun newInstance(): NotificationsFragment = NotificationsFragment();
+        fun newInstance(): ProfileFragment = ProfileFragment();
     }
 
     override fun onCreateView(
@@ -25,8 +24,8 @@ class NotificationsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         notificationsViewModel =
-            ViewModelProviders.of(this).get(NotificationsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
+            ViewModelProviders.of(this).get(ProfileViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_profile, container, false)
         val textView: TextView = root.findViewById(R.id.text_notifications)
         notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it

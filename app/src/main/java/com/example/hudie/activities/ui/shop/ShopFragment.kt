@@ -1,32 +1,26 @@
-package com.example.hudie.activities.ui.home
+package com.example.hudie.activities.ui.shop
 
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hudie.R
-import com.example.hudie.activities.ui.dashboard.DashboardFragment
 import com.example.hudie.adapters.ShopCardAdapter
 import com.example.hudie.api.RetrofitClient
 import com.example.hudie.models.DesignResponse
-import kotlinx.android.synthetic.main.fragment_dashboard.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class HomeFragment : Fragment() {
+class ShopFragment : Fragment() {
 
 
     companion object {
-        fun newInstance(): HomeFragment = HomeFragment();
+        fun newInstance(): ShopFragment = ShopFragment();
     }
 
     override fun onCreateView(
@@ -36,7 +30,7 @@ class HomeFragment : Fragment() {
     ): View? {
         Log.i("HOME", "onCreateView")
 
-        val view = inflater.inflate(R.layout.fragment_home, container, false);
+        val view = inflater.inflate(R.layout.fragment_shop, container, false);
 
         val mRecyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
         mRecyclerView.setHasFixedSize(true)
