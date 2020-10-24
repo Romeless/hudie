@@ -306,6 +306,12 @@
                 />
             </RadioGroup>
 
+            <CheckBox
+                android:id="@+id/shareable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="people can see your design"/>
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
