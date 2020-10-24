@@ -1,5 +1,6 @@
 package com.example.hudie.activities
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -47,6 +48,17 @@ class Home : AppCompatActivity() {
         fragmentTransaction.replace(R.id.nav_host_fragment, fragment)
         fragmentTransaction.addToBackStack(null)
         fragmentTransaction.commit()
+    }
+
+    private fun logoutUser()
+    {
+        var setting = this.getSharedPreferences("Hudie", 0);
+        var editor = setting.edit()
+        editor.remove("token")
+        editor.remove("username")
+        editor.remove("user_id")
+        editor.remove("role")
+        editor.commit()
     }
 
     /*override fun onCreate(savedInstanceState: Bundle?) {
