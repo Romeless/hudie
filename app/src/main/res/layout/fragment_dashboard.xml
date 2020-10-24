@@ -61,34 +61,33 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        app:layout_constraintVertical_weight="1"
-        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/images"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintVertical_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:background="@color/whitesmoke"
             android:gravity="center"
             android:orientation="vertical"
-            app:layout_constraintTop_toTopOf="@+id/images"
-            android:background="@color/whitesmoke"
-            >
+            app:layout_constraintTop_toTopOf="@+id/images">
 
             <EditText
-                android:background="@drawable/design_name_input"
-                android:padding="20dp"
                 android:id="@+id/design_name"
-                android:hint="DesignName"
-                android:textColor="#444444"
-                android:textColorHint="#777777"
-                android:textAlignment="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="10dp"
+                android:background="@drawable/design_name_input"
+                android:hint="DesignName"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:textColor="#444444"
+                android:textColorHint="#777777"
 
-            />
+                />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -173,8 +172,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="Navy"
-                    />
+                    android:text="Navy" />
 
                 <RadioButton
                     android:id="@+id/grey"
@@ -310,16 +308,15 @@
                 android:id="@+id/shareable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="people can see your design"/>
+                android:text="people can see your design" />
 
             <Button
+                android:id="@+id/submit_design"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/submit_design"
-                android:padding="20px"
-                android:text="Save Design"
                 android:layout_margin="40dp"
-                />
+                android:padding="20px"
+                android:text="Save Design" />
 
         </LinearLayout>
 
