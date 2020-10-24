@@ -61,18 +61,32 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        app:layout_constraintVertical_weight="1"
-        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/images"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintVertical_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:background="@color/whitesmoke"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintTop_toTopOf="@+id/images">
+
+            <EditText
+                android:id="@+id/design_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/design_name_input"
+                android:hint="DesignName"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:textColor="#444444"
+                android:textColorHint="#777777"
+
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -151,7 +165,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_margin="20dp"
-                android:checkedButton="@id/navy">
+                android:checkedButton="@id/grey">
 
                 <RadioButton
                     android:id="@+id/navy"
@@ -208,7 +222,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="type 2" />
+                    android:text="Type 2" />
             </RadioGroup>
 
             <View
@@ -243,14 +257,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="type 2" />
+                    android:text="Type 2" />
 
                 <RadioButton
                     android:id="@+id/tangan3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="type 3" />
+                    android:text="Type 3" />
             </RadioGroup>
 
             <View
@@ -285,19 +299,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="type 2" />
+                    android:text="Type 2" />
 
                 />
             </RadioGroup>
 
-            <Button
+            <CheckBox
+                android:id="@+id/shareable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="people can see your design" />
+
+            <Button
                 android:id="@+id/submit_design"
-                android:padding="20px"
-                android:text="Save Design"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="40dp"
-                />
+                android:padding="20px"
+                android:text="Save Design" />
 
         </LinearLayout>
 
