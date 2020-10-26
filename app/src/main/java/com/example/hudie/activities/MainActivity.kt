@@ -1,7 +1,9 @@
 package com.example.hudie.activities
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.hudie.models.Models
 import com.example.hudie.R
@@ -24,10 +26,11 @@ class MainActivity : AppCompatActivity() {
 
         var intent:Intent;
 
+        Log.i("TOKEN", localtoken)
 
-        intent = if (localtoken != " "){
+        intent = if (localtoken == " "){
             Intent(this, LoginActivity::class.java);
-        } else{
+        } else {
             Intent(this, Home::class.java);
         }
         startActivity(intent);

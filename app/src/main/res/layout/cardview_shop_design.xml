@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:ignore="MissingDefaultResource">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp" >
@@ -16,9 +16,8 @@
             android:id="@+id/design_image"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             app:srcCompat="@drawable/logo_only" />
@@ -27,24 +26,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/design_title"
-            android:layout_toEndOf="@+id/design_image"
-            android:layout_alignParentTop="true"
-            android:textSize="30sp" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/design_image"
+            android:textSize="30sp"
+            android:layout_marginLeft="16dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/design_creator"
-            android:layout_toEndOf="@+id/design_image"
-            android:layout_below="@+id/design_title" />
+            app:layout_constraintLeft_toRightOf="@id/design_image"
+            app:layout_constraintTop_toBottomOf="@id/design_title"
+            android:layout_marginLeft="16dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/design_detail"
-            android:layout_toEndOf="@+id/design_image"
-            android:layout_below="@+id/design_creator" />
+            app:layout_constraintLeft_toRightOf="@id/design_image"
+            app:layout_constraintTop_toBottomOf="@id/design_creator"
+            android:layout_marginLeft="16dp"/>
 
-    </RelativeLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/details_button"
+            android:text="Details"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/order_button"
+            android:text="Order"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_button"
+            android:layout_marginTop="8dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

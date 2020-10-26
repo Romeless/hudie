@@ -1,6 +1,7 @@
 package com.example.hudie.api
 
 import com.example.hudie.models.DesignResponse
+import com.example.hudie.models.OrderResponse
 import com.example.hudie.models.TokenResponse
 import com.example.hudie.models.UserResponse
 import retrofit2.Call
@@ -65,4 +66,27 @@ interface HudieApi {
 
     @GET("designs/user/{id}")
     fun userDesign(@Path("id") userID: Int): Call<ArrayList<DesignResponse>>
+
+    // ********************************************
+    // ORDER
+    // ********************************************
+
+    @GET("orders")
+    fun getOrders(): Call<ArrayList<OrderResponse>>
+
+    @POST("order/create")
+    @FormUrlEncoded
+    fun createOrder(
+        @Field("userID") userID: Int? = 0,
+        @Field("designID") designID: Int? = 0,
+        @Field("email") email: String,
+        @Field("qty") qty: Int,
+        @Field("address") address: String,
+        @Field("information") information: String,
+        @Field("price") price: Int,
+        @Field("phoneNumber") phoneNumber: Int? = 0,
+        @Field("details") details: String? = null,
+        @Field("images") images: String? = null,
+        @Field("imagesPosition") imagesPosition: String? = null
+    ): Call<OrderResponse>
 }

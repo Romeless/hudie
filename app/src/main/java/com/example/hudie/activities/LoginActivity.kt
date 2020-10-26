@@ -54,6 +54,8 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            Log.i("Log In", "Button Pressed!")
+
             RetrofitClient.instance.login(
                 username,password,device
             ).enqueue(object: Callback<TokenResponse> {
@@ -75,6 +77,7 @@ class LoginActivity : AppCompatActivity() {
                     editor.putString("username", username)
                     editor.putString("user_id", id)
                     editor.putString("role", role)
+                    editor.commit()
 
                     val intent = Intent(this@LoginActivity, MainActivity::class.java);
                     startActivity(intent);

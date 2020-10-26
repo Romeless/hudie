@@ -8,6 +8,7 @@ data class DesignResponse(
     @SerializedName("designName") val design_name: String,
     val details: String? = null,
     val images: String? = null,
+    val imagesPosition: String? = null,
     val information: String? = null,
     val share: Int,
     val price: Int,

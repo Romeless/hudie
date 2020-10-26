@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,7 +17,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ShopFragment : Fragment() {
+class ShopFragment : Fragment(){
 
 
     companion object {
@@ -48,7 +49,7 @@ class ShopFragment : Fragment() {
                 Log.i("HOME", "onRespond")
 
                 val designList = response.body()
-                val mRecyclerAdapter = designList?.let { ShopCardAdapter(it) }
+                val mRecyclerAdapter = designList?.let { ShopCardAdapter(it)  }
 
                 mRecyclerView.adapter = mRecyclerAdapter
                 mRecyclerAdapter?.notifyDataSetChanged()
@@ -56,7 +57,7 @@ class ShopFragment : Fragment() {
 
             override fun onFailure(call: Call<ArrayList<DesignResponse>>, t: Throwable) {
                 Log.i("HOME", "onFailure")
-                TODO("Not yet implemented")
+                Toast.makeText(context, "Something went wrong fetching shop database!", Toast.LENGTH_LONG)
             }
 
         })
