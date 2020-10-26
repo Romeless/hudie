@@ -12,7 +12,7 @@ data class OrderResponse(
     val qty: Int,
     val price: Int,
     val status: Int,
-    val phoneNumber: Int? = 0,
+    val phoneNumber: String? = "",
     val details: String? = null,
     val images: String? = null,
     val imagesPosition: String? = null

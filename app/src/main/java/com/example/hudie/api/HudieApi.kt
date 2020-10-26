@@ -74,7 +74,7 @@ interface HudieApi {
     @GET("orders")
     fun getOrders(): Call<ArrayList<OrderResponse>>
 
-    @POST("order/create")
+    @POST("orders/create")
     @FormUrlEncoded
     fun createOrder(
         @Field("userID") userID: Int? = 0,
@@ -84,7 +84,7 @@ interface HudieApi {
         @Field("address") address: String,
         @Field("information") information: String,
         @Field("price") price: Int,
-        @Field("phoneNumber") phoneNumber: Int? = 0,
+        @Field("phoneNumber") phoneNumber: String? = null,
         @Field("details") details: String? = null,
         @Field("images") images: String? = null,
         @Field("imagesPosition") imagesPosition: String? = null

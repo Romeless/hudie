@@ -33,10 +33,6 @@ class OrderActivity : AppCompatActivity() {
         val detailsArray = Klaxon().parse<DesignDetails>(details.toString())
 
         Log.i("ORDER", "DETAILS: $details")
-//        Log.i("ORDER", detailsArray?.kepala.toString())
-//        Log.i("ORDER", detailsArray?.tangan.toString())
-//        Log.i("ORDER", detailsArray?.badan.toString())
-//        Log.i("ORDER", detailsArray?.warna.toString())
 
         val headText = detailsArray?.kepala.toString()
         val handText = detailsArray?.tangan.toString()
@@ -104,19 +100,31 @@ class OrderActivity : AppCompatActivity() {
 
             var qtyText = qty.text.toString().toInt()
             var addressText = address.text.toString()
-            var phoneText = phone.text.toString().toInt()
+            var phoneText = phone.text.toString()
             var informationText = information.text.toString()
             var priceText = pricePerQty * qtyText + 20000
             var emailText = email.text.toString()
 
+            Log.i("ORDER", userID.toString())
+            Log.i("ORDER", designID.toString())
+            Log.i("ORDER", emailText)
+            Log.i("ORDER", qtyText.toString())
+            Log.i("ORDER", addressText)
+            Log.i("ORDER", informationText)
+            Log.i("ORDER", priceText.toString())
+            Log.i("ORDER", phoneText)
+            Log.i("ORDER", details.toString())
+            Log.i("ORDER", images.toString())
+            Log.i("ORDER", imagesPosition.toString())
+
             RetrofitClient.instance.createOrder(
-                userID, designID, emailText, qtyText, addressText, informationText, priceText, phoneText, details, images, imagesPosition
+                userID = userID, designID = designID, email = emailText, qty = qtyText, address = addressText, information = informationText, price = priceText, phoneNumber = phoneText, details = details, images = images, imagesPosition = imagesPosition
             ).enqueue(object: Callback<OrderResponse> {
                 override fun onResponse(
                     call: Call<OrderResponse>,
                     response: Response<OrderResponse>
                 ) {
-                    Log.i("ORDER", "Order berhasil dibuat: ID" + response?.body()?.id.toString())
+                    Log.i("ORDER", "Order berhasil dibuat: ID")
                     Toast.makeText(applicationContext, "Order berhasil dibuat: ID" + response?.body()?.id.toString(), Toast.LENGTH_LONG).show()
 
                     val intent = Intent(this@OrderActivity, MainActivity::class.java);
@@ -128,73 +136,6 @@ class OrderActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
                 }
             })
-        }
-    }
-
-    private fun visualizeDesign(details: String) {
-        val detailsArray = JSONArray(details)
-
-    }
-
-    private fun colorValue(text:String) : String{
-        return when (text) {
-            "Navy" -> {
-                "navy";
-            }
-            "Black" -> {
-                "black";
-            }
-            "Grey" -> {
-                "grey";
-            }
-            else -> {
-                "";
-            }
-        }
-    }
-    private fun headValue(text:String) : String{
-        return when (text) {
-            "Type 1" -> {
-                "kepala1";
-            }
-            "Type 2" -> {
-                "kepala2";
-            }
-            else -> {
-                "";
-            }
-        }
-    }
-    private fun handValue(text:String) : String{
-        return when (text) {
-            "Type 1" -> {
-                "tangan1";
-            }
-            "Type 2" -> {
-                "tangan2";
-            }
-            "Type 3" -> {
-                "tangan3";
-            }
-            else -> {
-                "";
-            }
-        }
-    }
-    private fun bodyValue(text:String) : String{
-        return when (text) {
-            "Type 1" -> {
-                "badan1";
-            }
-            "Type 2" -> {
-                "badan2";
-            }
-            "Type 3" -> {
-                "badan3";
-            }
-            else -> {
-                "";
-            }
         }
     }
 }
