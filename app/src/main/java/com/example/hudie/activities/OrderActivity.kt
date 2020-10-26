@@ -26,6 +26,9 @@ class OrderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order)
 
+        var designName = findViewById<TextView>(R.id.design_name);
+        designName.text = intent.getStringExtra("designName")
+
         var details = intent.getStringExtra("details")
         var images = intent.getStringExtra("images")
         var imagesPosition = intent.getStringExtra("imagesPosition")

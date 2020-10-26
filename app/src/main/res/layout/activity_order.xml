@@ -78,6 +78,7 @@
                 android:layout_marginVertical="10dp"
                 android:background="@drawable/design_name_input"
                 android:text="Nama Design"
+                android:textSize="24sp"
                 android:padding="10dp"
                 android:textAlignment="center"
                 android:textColor="#444444"
