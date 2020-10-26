@@ -4,8 +4,16 @@
         "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/item_post.xml"
     },
     {
-        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/menu_bottom_nav_menu.xml.flat",
-        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/menu/bottom_nav_menu.xml"
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_kepala1_grey.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/kepala1_grey.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_design_name_input.xml.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/design_name_input.xml"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_tangan3_black.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/tangan3_black.png"
     },
     {
         "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
@@ -16,16 +24,20 @@
         "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_badan2_grey.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/badan2_grey.png"
     },
     {
-        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/layout_fragment_my_design.xml.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/fragment_my_design.xml"
     },
     {
         "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/layout_activity_login.xml.flat",
         "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_tangan2_grey.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/tangan2_grey.png"
     },
     {
         "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_to_register_from_login.xml.flat",
@@ -36,14 +48,6 @@
         "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/layout_fragment_notifications.xml.flat",
-        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/fragment_notifications.xml"
-    },
-    {
-        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_ic_ux_design.xml.flat",
-        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/ic_ux_design.xml"
-    },
-    {
         "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_login_input.xml.flat",
         "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/login_input.xml"
     },
@@ -52,16 +56,12 @@
         "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/navigation/mobile_navigation.xml"
     },
     {
-        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
-        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/ic_launcher_background.xml"
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/layout_activity_profile.xml.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/activity_profile.xml"
     },
     {
         "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_button_login.xml.flat",
         "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/button_login.xml"
-    },
-    {
-        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
         "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -76,24 +76,36 @@
         "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_tangan2_navy.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/tangan2_navy.png"
     },
     {
         "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
         "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_badan2_navy.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/badan2_navy.png"
     },
     {
         "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_ic_ux_shop.xml.flat",
-        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/ic_ux_shop.xml"
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_badan1_black.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/badan1_black.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/layout_fragment_profile.xml.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_tangan2_black.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/tangan2_black.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_kepala1_navy.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/kepala1_navy.png"
     },
     {
         "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -104,31 +116,115 @@
         "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/ic_home_black_24dp.xml"
     },
     {
-        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",
-        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/fragment_home.xml"
-    },
-    {
-        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/layout_activity_register.xml.flat",
-        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/activity_register.xml"
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_badan1_navy.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/badan1_navy.png"
     },
     {
         "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_logo_only.png.flat",
         "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/logo_only.png"
     },
     {
-        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_ic_notifications_black_24dp.xml.flat",
-        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/ic_notifications_black_24dp.xml"
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/layout_activity_register.xml.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/activity_register.xml"
     },
     {
-        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_ic_ux_setting.xml.flat",
-        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/ic_ux_setting.xml"
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/layout_cardview_my_design.xml.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/cardview_my_design.xml"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/ic_notifications_black_24dp.xml"
     },
     {
         "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/layout_fragment_dashboard.xml.flat",
-        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/fragment_dashboard.xml"
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/layout_fragment_shop.xml.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/fragment_shop.xml"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_tangan1_navy.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/tangan1_navy.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/menu_bottom_nav_menu.xml.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_kepala2_navy.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/kepala2_navy.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_kepala2_black.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/kepala2_black.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_badan2_black.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/badan2_black.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_tangan3_grey.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/tangan3_grey.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/layout_fragment_design.xml.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/fragment_design.xml"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_tangan3_navy.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/tangan3_navy.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_kepala1_black.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/kepala1_black.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/layout_cardview_shop_design.xml.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/cardview_shop_design.xml"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_tangan1_black.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/tangan1_black.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_kepala2_grey.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/kepala2_grey.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_badan1_grey.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/badan1_grey.png"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/layout_activity_order.xml.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/layout/activity_order.xml"
+    },
+    {
+        "merged": "/home/romeless/AndroidStudioProjects/hudie/app/build/intermediates/res/merged/debug/drawable_tangan1_grey.png.flat",
+        "source": "/home/romeless/AndroidStudioProjects/hudie/app/src/main/res/drawable/tangan1_grey.png"
     }
 ]

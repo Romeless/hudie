@@ -7,14 +7,11 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CUSTOM_FILTER" value="ORDER" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="info" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5047dba3-46fa-4e48-950b-81cb3e6fa962" name="Default Changelist" comment="Order">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/activities/OrderActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/models/DesignDetails.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/models/OrderResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -23,16 +20,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" afterDir="false" />
@@ -233,16 +223,6 @@
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/hudie/activities/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/hudie/activities/MainActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/hudie/adapters/PostAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/hudie/adapters/PostAdapter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/hudie/api/HudieApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/hudie/api/HudieApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/activities/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/activities/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/activities/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/activities/ui/OrderActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/activities/ui/shop/ShopFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/activities/ui/shop/ShopFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/adapters/ShopCardAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/adapters/ShopCardAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/api/HudieApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/api/HudieApi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/models/DesignResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hudie/models/DesignResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_order.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_order.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/cardview_shop_design.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/cardview_shop_design.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -409,16 +389,30 @@
       <option name="project" value="LOCAL" />
       <updated>1601196655052</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Order Create">
+      <created>1603717576209</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603717576209</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Order">
+      <created>1603720034843</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603720034843</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implement Register Connection API" />
     <MESSAGE value="Implement The Rest of Connection API" />
     <MESSAGE value="Fragment Change and Button Connection" />
-    <MESSAGE value="Order" />
     <MESSAGE value="Order Create" />
-    <option name="LAST_COMMIT_MESSAGE" value="Order Create" />
+    <MESSAGE value="Order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Order" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1231" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1603709163413">
@@ -449,10 +443,10 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="1028" y="280" width="824" height="483" key="AndroidCreateResourceFileDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1603357282795" />
-    <state x="0" y="0" width="1920" height="1044" key="CommitChangelistDialog2" timestamp="1603717574881">
+    <state x="263" y="101" width="1280" height="696" key="CommitChangelistDialog2" timestamp="1603720508240">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="0" y="0" width="1920" height="1044" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1603717574881" />
+    <state x="263" y="101" width="1280" height="696" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1603720508240" />
     <state x="192" y="90" key="DiffContextDialog" timestamp="1603378723647">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
@@ -461,22 +455,22 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="747" y="266" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1603371971630" />
-    <state width="1874" height="226" key="GridCell.Tab.0.bottom" timestamp="1603716348374">
+    <state width="1874" height="226" key="GridCell.Tab.0.bottom" timestamp="1603720040500">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="226" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1603716348374" />
-    <state width="1874" height="226" key="GridCell.Tab.0.center" timestamp="1603716348372">
+    <state width="1874" height="226" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1603720040500" />
+    <state width="1874" height="226" key="GridCell.Tab.0.center" timestamp="1603720040493">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="226" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1603716348372" />
-    <state width="1874" height="226" key="GridCell.Tab.0.left" timestamp="1603716348371">
+    <state width="1874" height="226" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1603720040493" />
+    <state width="1874" height="226" key="GridCell.Tab.0.left" timestamp="1603720040492">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="226" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1603716348371" />
-    <state width="1874" height="226" key="GridCell.Tab.0.right" timestamp="1603716348373">
+    <state width="1874" height="226" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1603720040492" />
+    <state width="1874" height="226" key="GridCell.Tab.0.right" timestamp="1603720040494">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1874" height="226" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1603716348373" />
+    <state width="1874" height="226" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1603720040494" />
     <state x="624" y="215" key="RollbackChangesDialog" timestamp="1603378670107">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
