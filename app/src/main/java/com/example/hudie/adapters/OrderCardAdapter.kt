@@ -24,7 +24,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class OrderCardAdapter(private val designList: ArrayList<OrderResponse>) : RecyclerView.Adapter<OrderCardAdapter.ViewHolder>() {
+class OrderCardAdapter(private val orderList: ArrayList<OrderResponse>) : RecyclerView.Adapter<OrderCardAdapter.ViewHolder>() {
 
     companion object {
         fun newInstance(): OrderCardAdapter = OrderCardAdapter(ArrayList())
@@ -32,10 +32,11 @@ class OrderCardAdapter(private val designList: ArrayList<OrderResponse>) : Recyc
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        var designID: Int = 0;
-        var designDetails: String = "";
-        var designImages: String = "";
-        var designImagesPosition: String = "";
+        var orderID: Int = 0
+        var designID: Int = 0
+        var orderDetails: String = ""
+        var orderImages: String = ""
+        var orderImagesPosition: String = ""
 
         var context: Context = itemView.context
 
@@ -65,30 +66,28 @@ class OrderCardAdapter(private val designList: ArrayList<OrderResponse>) : Recyc
         var setting = PreferenceManager.getDefaultSharedPreferences(viewHolder.context);
         var editor = setting.edit();
 
-        viewHolder.designID = designList[i].id
-        viewHolder.designDetails = designList[i].details.toString()
-        viewHolder.designImages = designList[i].images.toString()
-        viewHolder.designImagesPosition = designList[i].imagesPosition.toString()
-        viewHolder.qty.text = designList[i].qty.toString()
-        viewHolder.address.text = designList[i].address
-        viewHolder.price.text = designList[i].price.toString()
-
+        viewHolder.orderID = orderList[i].id
+        viewHolder.designID = orderList[i].designID!!
+        viewHolder.orderDetails = orderList[i].details.toString()
+        viewHolder.orderImages = orderList[i].images.toString()
+        viewHolder.orderImagesPosition = orderList[i].imagesPosition.toString()
+        viewHolder.qty.text = orderList[i].qty.toString()
+        viewHolder.address.text = orderList[i].address
+        viewHolder.price.text = orderList[i].price.toString()
 
         viewHolder.pay.setOnClickListener {
             val intent = Intent(context, PaymentActivity::class.java)
-            intent.putExtra("id", viewHolder.designID)
+            intent.putExtra("order_id", viewHolder.orderID)
             viewHolder.context.startActivity(intent);
         }
 
         viewHolder.cancel.setOnClickListener {
             RetrofitClient.instance.updateOrder(
-                setting.getString("user_id", "0").toString().toInt(),
-                designList[i].userID,
-                designList[i].designID,
-                designList[i].qty,
-                designList[i].information,
-                designList[i].price,
-                setting.getString("token", " ").toString()
+                orderID = viewHolder.orderID,
+                userID = setting.getInt("user_id", 0),
+                designID = viewHolder.designID,
+                status = 7,
+                token = setting.getString("token", "")
             ).enqueue(object : Callback<OrderResponse> {
                 override fun onResponse(
                     call: Call<OrderResponse>,
@@ -107,7 +106,7 @@ class OrderCardAdapter(private val designList: ArrayList<OrderResponse>) : Recyc
                 }
             })
 
-            var details = viewHolder.designDetails
+            var details = viewHolder.orderDetails
             //var images = viewHolder.designImages
             //var imagesPosition = viewHolder.designImagesPosition
 
@@ -141,7 +140,7 @@ class OrderCardAdapter(private val designList: ArrayList<OrderResponse>) : Recyc
         }
     }
 
-    override fun getItemCount(): Int = designList.size
+    override fun getItemCount(): Int = orderList.size
 
 
 }

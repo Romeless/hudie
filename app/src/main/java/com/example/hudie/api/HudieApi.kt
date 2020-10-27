@@ -96,8 +96,8 @@ interface HudieApi {
     @POST("orders/create")
     @FormUrlEncoded
     fun createOrder(
-        @Field("userID") userID: Int? = 0,
-        @Field("designID") designID: Int? = 0,
+        @Field("userID") userID: Int? = null,
+        @Field("designID") designID: Int? = null,
         @Field("email") email: String,
         @Field("qty") qty: Int,
         @Field("address") address: String,
@@ -113,12 +113,19 @@ interface HudieApi {
     @FormUrlEncoded
     fun updateOrder(
         @Path("id") orderID :Int,
-        @Field("userID") userID: Int? = 0,
-        @Field("designID") designID: Int? = 0,
-        @Field("qty") qty: Int,
-        @Field("information") information: String? = "",
-        @Field("price") price: Int,
-        @Field("token") token: String
+        @Field("userID") userID: Int,
+        @Field("designID") designID: Int,
+        @Field("qty") qty: Int? = null,
+        @Field("address") address: String? = null,
+        @Field("information") information: String? = null,
+        @Field("price") price: Int? = null,
+        @Field("email") email: String? = null,
+        @Field("phoneNumber") phone_number: String? = null,
+        @Field("details") details: String? = null,
+        @Field("images") images: String? = null,
+        @Field("imagesPosition") imagesPosition: String? = null,
+        @Field("status") status: Int? = null,
+        @Field("token") token: String? = null
     ): Call<OrderResponse>
 
     @GET("orders/user/{id}")

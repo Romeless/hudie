@@ -27,27 +27,6 @@ class MyOrder : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
 
-        val orderID = intent.getIntExtra("order_id", 0 )
-        val orderStatus = 0;
-
-        RetrofitClient.instance.showOrder(orderID).enqueue(object: Callback<OrderResponse> {
-            override fun onResponse(call: Call<OrderResponse>, response: Response<OrderResponse>) {
-                if(response.isSuccessful) {
-
-
-                } else {
-                    Log.i("PAYMENT", response.body().toString())
-                    Toast.makeText(applicationContext, "Failed to get Order Details", Toast.LENGTH_LONG)
-                }
-            }
-
-            override fun onFailure(call: Call<OrderResponse>, t: Throwable) {
-                Log.i("PAYMENT", t.message.toString())
-                Toast.makeText(applicationContext, "Failed to get Order Details", Toast.LENGTH_LONG)
-            }
-
-        })
-
         val context = this;
         val mRecyclerView = findViewById<RecyclerView>(R.id.myorder_recycler_view)
         mRecyclerView.layoutManager = layoutManager
