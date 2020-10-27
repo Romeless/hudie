@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.beust.klaxon.Klaxon
 import com.example.hudie.R
+import com.example.hudie.activities.DetailsActivity
 import com.example.hudie.activities.OrderActivity
 import com.example.hudie.models.DesignDetails
 import com.example.hudie.models.DesignResponse
@@ -60,7 +61,17 @@ class ShopCardAdapter(private val designList: ArrayList<DesignResponse>) : Recyc
         viewHolder.itemDesigner.text = designList[i].username
         viewHolder.itemDetail.text = designList[i].price.toString()
 
-        viewHolder.detailButton.setOnClickListener { /*TODO */ }
+        viewHolder.detailButton.setOnClickListener {
+            val detailIntent = Intent(viewHolder.context, DetailsActivity::class.java)
+            detailIntent.putExtra("designID", viewHolder.designID)
+            detailIntent.putExtra("details", viewHolder.designDetails)
+            detailIntent.putExtra("images", viewHolder.designImages)
+            detailIntent.putExtra("imagesPosition", viewHolder.designImagesPosition)
+            detailIntent.putExtra("price", viewHolder.itemDetail.text.toString().toInt())
+            detailIntent.putExtra("designName", viewHolder.itemTitle.text.toString())
+
+            viewHolder.context.startActivity(detailIntent)
+        }
 
         viewHolder.orderButton.setOnClickListener {
             val orderIntent = Intent(viewHolder.context, OrderActivity::class.java)

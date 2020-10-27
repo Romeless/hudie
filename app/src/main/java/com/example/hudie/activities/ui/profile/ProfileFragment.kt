@@ -19,7 +19,6 @@ import com.example.hudie.activities.Profile
 
 class ProfileFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: ProfileViewModel
 
     companion object {
         fun newInstance(): ProfileFragment = ProfileFragment();
@@ -34,9 +33,8 @@ class ProfileFragment : Fragment() {
         var editor = setting.edit();
 
         val context = this.context;
-        notificationsViewModel =
-            ViewModelProviders.of(this).get(ProfileViewModel::class.java)
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
+
         val profile_button = view.findViewById<Button>(R.id.profile_button_page);
         val myorder_button = view.findViewById<Button>(R.id.profile_myorder_page);
         val mydesign_button = view.findViewById<Button>(R.id.profile_mydesign_page);
@@ -47,7 +45,6 @@ class ProfileFragment : Fragment() {
             intent = Intent(context, Profile::class.java);
             Log.i("tesr", "masuk")
             startActivity(intent);
-
         }
 
         mydesign_button.setOnClickListener {

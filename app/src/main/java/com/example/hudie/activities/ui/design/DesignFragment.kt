@@ -1,6 +1,7 @@
 package com.example.hudie.activities.ui.design
 
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -42,7 +43,7 @@ class DesignFragment : Fragment() {
 
         val designName = view.findViewById<EditText>(R.id.design_name)
 
-        var setting = this.activity?.getSharedPreferences("Hudie", 0);
+        var setting = PreferenceManager.getDefaultSharedPreferences(getContext());
         var userId = setting?.getString("user_id", "0")?.toInt()
 
         color.setOnCheckedChangeListener { radioGroup, i ->

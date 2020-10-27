@@ -2,6 +2,7 @@ package com.example.hudie.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
@@ -56,7 +57,7 @@ class OrderActivity : AppCompatActivity() {
         imageRightHand.setImageResource(imageHandId);
         imageBody.setImageResource(imageBodyId);
 
-        var setting = getSharedPreferences("Hudie", 0)
+        var setting = PreferenceManager.getDefaultSharedPreferences(applicationContext)
         var userID = setting.getString("user_id", "0").toString().toInt()
 
         var email = findViewById<TextView>(R.id.emailBox)

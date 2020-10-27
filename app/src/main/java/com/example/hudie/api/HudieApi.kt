@@ -26,6 +26,21 @@ interface HudieApi {
         @Field("phoneNumber") phone_number: String? = null
     ): Call<UserResponse>
 
+    @POST("users/update/{id}")
+    @FormUrlEncoded
+    fun updateUser(
+        @Path("id") id: Int,
+        @Field("username") username: String? = null,
+        @Field("password") password: String? = null,
+        @Field("email") email: String,
+        @Field("fullName") fullname: String,
+        @Field("avatar") avatar: String? = null,
+        @Field("address") address: String,
+        @Field("phoneNumber") phone_number: String? = null,
+        @Field("lastLogin") lastLogin: String? = null,
+        @Field("token") token: String? = null
+    ): Call<UserResponse>
+
     @POST("users/login")
     @FormUrlEncoded
     fun login(

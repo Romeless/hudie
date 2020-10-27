@@ -166,7 +166,7 @@ class LoginActivity : AppCompatActivity() {
                         Log.i("LOGIN", "Google Log In berhasil: " + response.body()?.user_id)
                         Toast.makeText(applicationContext, "Google Login berhasil", Toast.LENGTH_LONG).show()
 
-                        var setting = getSharedPreferences("Hudie", 0);
+                        var setting = PreferenceManager.getDefaultSharedPreferences(applicationContext);
                         var editor = setting.edit();
 
                         editor.putString("token", response.body()?.token)
