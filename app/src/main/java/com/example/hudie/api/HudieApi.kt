@@ -123,6 +123,9 @@ interface HudieApi {
 
     @GET("orders/user/{id}")
     fun userOrder(@Path("id") userID : Int) : Call<ArrayList<OrderResponse>>
+
+    @GET("orders/show/{id}")
+    fun showOrder(@Path("id") orderID: Int) : Call<OrderResponse>
     // ********************************************
     // TOKEN
     // ********************************************
@@ -134,7 +137,5 @@ interface HudieApi {
         @Field("email") email: String,
         @Field("google") google: Int? = 0
     ): Call<TokenResponse>
-
-
 
 }

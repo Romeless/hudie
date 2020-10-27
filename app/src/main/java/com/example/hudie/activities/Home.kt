@@ -50,17 +50,6 @@ class Home : AppCompatActivity() {
         fragmentTransaction.commit()
     }
 
-    private fun logoutUser()
-    {
-        var setting = this.getSharedPreferences("Hudie", 0);
-        var editor = setting.edit()
-        editor.remove("token")
-        editor.remove("username")
-        editor.remove("user_id")
-        editor.remove("role")
-        editor.commit()
-    }
-
     /*override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

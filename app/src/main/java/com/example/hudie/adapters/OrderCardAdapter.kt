@@ -76,7 +76,7 @@ class OrderCardAdapter(private val designList: ArrayList<OrderResponse>) : Recyc
 
         viewHolder.pay.setOnClickListener {
             val intent = Intent(context, PaymentActivity::class.java)
-            intent.putExtra("id", designList[i].id)
+            intent.putExtra("id", viewHolder.designID)
             viewHolder.context.startActivity(intent);
         }
 
