@@ -1,4 +1,4 @@
-package com.example.hudie
+package com.example.hudie.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,10 +7,9 @@ import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hudie.R
 import com.example.hudie.adapters.OrderCardAdapter
-import com.example.hudie.adapters.ShopCardAdapter
 import com.example.hudie.api.RetrofitClient
-import com.example.hudie.models.DesignResponse
 import com.example.hudie.models.OrderResponse
 import retrofit2.Call
 import retrofit2.Callback
