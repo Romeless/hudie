@@ -109,6 +109,20 @@ interface HudieApi {
         @Field("imagesPosition") imagesPosition: String? = null
     ): Call<OrderResponse>
 
+    @PUT("orders/update/{id}")
+    @FormUrlEncoded
+    fun updateOrder(
+        @Path("id") orderID :Int,
+        @Field("userID") userID: Int? = 0,
+        @Field("designID") designID: Int? = 0,
+        @Field("qty") qty: Int,
+        @Field("information") information: String? = "",
+        @Field("price") price: Int,
+        @Field("token") token: String
+    ): Call<OrderResponse>
+
+    @GET("orders/user/{id}")
+    fun userOrder(@Path("id") userID : Int) : Call<ArrayList<OrderResponse>>
     // ********************************************
     // TOKEN
     // ********************************************
@@ -120,4 +134,7 @@ interface HudieApi {
         @Field("email") email: String,
         @Field("google") google: Int? = 0
     ): Call<TokenResponse>
+
+
+
 }

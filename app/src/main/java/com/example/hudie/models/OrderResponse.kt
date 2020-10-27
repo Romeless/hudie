@@ -15,5 +15,6 @@ data class OrderResponse(
     val phoneNumber: String? = "",
     val details: String? = null,
     val images: String? = null,
-    val imagesPosition: String? = null
+    val imagesPosition: String? = null,
+    val information: String? = ""
 )

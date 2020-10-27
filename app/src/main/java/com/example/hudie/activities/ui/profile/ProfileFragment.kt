@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.example.hudie.MyOrder
 import com.example.hudie.R
 import com.example.hudie.activities.MainActivity
 import com.example.hudie.activities.MyDesign
@@ -50,6 +51,13 @@ class ProfileFragment : Fragment() {
         mydesign_button.setOnClickListener {
             var intent: Intent;
             intent = Intent(context, MyDesign::class.java);
+            Log.i("tesr", "masuk")
+            startActivity(intent);
+        }
+
+        myorder_button.setOnClickListener {
+            var intent: Intent;
+            intent = Intent(context, MyOrder::class.java);
             Log.i("tesr", "masuk")
             startActivity(intent);
         }

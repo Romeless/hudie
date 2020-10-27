@@ -40,16 +40,26 @@ class Profile : AppCompatActivity() {
             override fun onResponse(
                 call: Call<UserResponse>,
                 response: Response<UserResponse>
+
             ) {
                 if (response.isSuccessful) {
                     val response = response.body();
 
-                    username_text.setText(response?.username)
-                    fullname_text.setText(response?.full_name)
-                    address_text.setText(response?.address)
-                    phone_text.setText(response?.phone_number)
+                    val username_text = findViewById<TextView>(R.id.profile_username);
+                    val fullname_text = findViewById<TextView>(R.id.profile_fullname);
+                    val address_text = findViewById<TextView>(R.id.profile_address);
+                    val phone_text = findViewById<TextView>(R.id.profile_phone_number);
+                    val email = findViewById<TextView>(R.id.profile_email);
 
+
+
+                    username_text.text = response?.username;
+                    fullname_text.text = response?.full_name;
+                    address_text.text = response?.address;
+                    phone_text.text = response?.phone_number;
                     email.text = response?.email;
+
+
                 } else {
                     Log.i("PROFILE", response.body().toString())
                     Toast.makeText(applicationContext, "Failed to fetch User Profile", Toast.LENGTH_LONG)
