@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.beust.klaxon.Klaxon
 import com.example.hudie.R
 import com.example.hudie.activities.OrderActivity
+import com.example.hudie.activities.PaymentActivity
 import com.example.hudie.api.RetrofitClient
 import com.example.hudie.models.DesignDetails
 import com.example.hudie.models.DesignResponse
@@ -73,7 +74,11 @@ class OrderCardAdapter(private val designList: ArrayList<OrderResponse>) : Recyc
         viewHolder.price.text = designList[i].price.toString()
 
 
-        viewHolder.pay.setOnClickListener { /*TODO */ }
+        viewHolder.pay.setOnClickListener {
+            val intent = Intent(context, PaymentActivity::class.java)
+            intent.putExtra("id", designList[i].id)
+            viewHolder.context.startActivity(intent);
+        }
 
         viewHolder.cancel.setOnClickListener {
             RetrofitClient.instance.updateOrder(
