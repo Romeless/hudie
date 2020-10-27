@@ -34,7 +34,7 @@ interface HudieApi {
         @Field("device") device: String? = null
     ): Call<TokenResponse>
 
-    @POST("users/googleAuth")
+    @POST("users/googleAuthMobile")
     @FormUrlEncoded
     fun googleAuth(
         @Field("tokenID") token_ID: String,
@@ -42,7 +42,8 @@ interface HudieApi {
         @Field("googleID") google_ID: String,
         @Field("email") email: String,
         @Field("device") device: String? = null
-    ): Call<UserResponse>
+    ): Call<TokenResponse>
+
 
     // ********************************************
     // DESIGN
@@ -89,4 +90,16 @@ interface HudieApi {
         @Field("images") images: String? = null,
         @Field("imagesPosition") imagesPosition: String? = null
     ): Call<OrderResponse>
+
+    // ********************************************
+    // TOKEN
+    // ********************************************
+
+    @POST("tokens/verify")
+    @FormUrlEncoded
+    fun verifyToken(
+        @Field("token") token: String,
+        @Field("email") email: String,
+        @Field("google") google: Int? = 0
+    ): Call<TokenResponse>
 }

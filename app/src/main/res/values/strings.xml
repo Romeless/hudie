@@ -7,4 +7,6 @@
     <string name="title_shop">Shop</string>
     <string name="title_design">Design</string>
     <string name="title_profile">Profile</string>
+    <string name="google_client_id">334821050843-6dhrv9e9bhn84sqhr1bbvbpgj98b87ms.apps.googleusercontent.com</string>
+    <string name="google_client_secret">GiJU6m4DlUJh7xK3j45jltPY</string>
 </resources>
