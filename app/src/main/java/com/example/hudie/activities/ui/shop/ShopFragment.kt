@@ -41,7 +41,7 @@ class ShopFragment : Fragment(){
 
         mRecyclerView.layoutManager = layoutManager
 
-        RetrofitClient.instance.getDesigns().enqueue(object: Callback<ArrayList<DesignResponse>> {
+        RetrofitClient.instance.getSharableDesigns().enqueue(object: Callback<ArrayList<DesignResponse>> {
             override fun onResponse(
                 call: Call<ArrayList<DesignResponse>>,
                 response: Response<ArrayList<DesignResponse>>

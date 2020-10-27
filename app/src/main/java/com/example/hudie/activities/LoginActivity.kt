@@ -162,6 +162,7 @@ class LoginActivity : AppCompatActivity() {
                 ) {
                     if (response.isSuccessful) {
                         Log.i("LOGIN", "Google Log In berhasil: " + response.body()?.user_id)
+                        Toast.makeText(applicationContext, "Google Login berhasil", Toast.LENGTH_LONG).show()
 
                         var setting = getSharedPreferences("Hudie", 0);
                         var editor = setting.edit();
@@ -179,6 +180,7 @@ class LoginActivity : AppCompatActivity() {
                     } else {
                         Log.i("LOGIN", "Google Log In gagal: CODE" + response.code())
                         Log.i("LOGIN", "Google Log In gagal: " + response.errorBody().toString())
+                        Toast.makeText(applicationContext, "Google Log In gagal: CODE" + response.code(), Toast.LENGTH_LONG).show()
                     }
                 }
 
@@ -188,7 +190,7 @@ class LoginActivity : AppCompatActivity() {
                         applicationContext,
                         "Error: " + t.message,
                         Toast.LENGTH_LONG
-                    )
+                    ).show()
                 }
 
             })
@@ -200,7 +202,7 @@ class LoginActivity : AppCompatActivity() {
                 applicationContext,
                 "signInResult:failed code=" + e.statusCode,
                 Toast.LENGTH_LONG
-            )
+            ).show()
         }
     }
 

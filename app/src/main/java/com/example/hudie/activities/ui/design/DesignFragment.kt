@@ -1,19 +1,19 @@
 package com.example.hudie.activities.ui.design
 
-import android.content.Context
-import android.media.Image
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.RadioButton
-import android.widget.RadioGroup
+import android.widget.*
 import androidx.fragment.app.Fragment
-//import androidx.lifecycle.ViewModelProviders
+import com.beust.klaxon.JsonObject
 import com.example.hudie.R
+import com.example.hudie.api.RetrofitClient
+import com.example.hudie.models.DesignResponse
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class DesignFragment : Fragment() {
 
@@ -38,44 +38,12 @@ class DesignFragment : Fragment() {
         val hand: RadioGroup = view.findViewById<RadioGroup>(R.id.tangan)
         val body: RadioGroup = view.findViewById<RadioGroup>(R.id.badan)
 
+        val share = view.findViewById<CheckBox>(R.id.shareable)
+
+        val designName = view.findViewById<EditText>(R.id.design_name)
+
         var setting = this.activity?.getSharedPreferences("Hudie", 0);
-        var user_id = setting?.getString("id", "0")
-
-        submitButton.setOnClickListener {
-            val selSize = view.findViewById<RadioButton>(size.checkedRadioButtonId).text.toString();
-            val selColor = view.findViewById<RadioButton>(color.checkedRadioButtonId).text.toString();
-            val selHead = view.findViewById<RadioButton>(head.checkedRadioButtonId).text.toString();
-            val selHand = view.findViewById<RadioButton>(hand.checkedRadioButtonId).text.toString();
-            val selBody = view.findViewById<RadioButton>(body.checkedRadioButtonId).text.toString();
-
-//            RetrofitClient.instance.createDesign(
-//                user_id = user_id,
-//                design_name = ,
-//                details = ,
-//                images = ,
-//                images_position = ,
-//                information = ,
-//                price = ,
-//                share =
-//            ).enqueue(object: Callback<TokenResponse> {
-//                override fun onResponse(
-//                    call: Call<TokenResponse>,
-//                    response: Response<TokenResponse>
-//                ) {
-//                    Log.i("Design Create #1", response.body().toString())
-//
-//
-//                }
-//
-//                override fun onFailure(call: Call<TokenResponse>, t: Throwable) {
-//                    Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
-//                }
-//            }
-        }
-
-        val color_navy_btn = view.findViewById<RadioButton>(R.id.navy);
-        val color_black_btn = view.findViewById<RadioButton>(R.id.black);
-        val color_grey_btn = view.findViewById<RadioButton>(R.id.grey);
+        var userId = setting?.getString("user_id", "0")?.toInt()
 
         color.setOnCheckedChangeListener { radioGroup, i ->
             val color_text = colorValue(view.findViewById<RadioButton>(color.checkedRadioButtonId).text.toString());
@@ -103,7 +71,6 @@ class DesignFragment : Fragment() {
             image_right_hand.setImageResource(image_hand_id);
             image_body.setImageResource(image_body_id);
          }
-
         head.setOnCheckedChangeListener { radioGroup, i ->
             val color_text = colorValue(view.findViewById<RadioButton>(color.checkedRadioButtonId).text.toString());
             val head_text = headValue(view.findViewById<RadioButton>(head.checkedRadioButtonId).text.toString());
@@ -124,7 +91,6 @@ class DesignFragment : Fragment() {
             image_left_hand.setImageResource(image_hand_id);
             image_right_hand.setImageResource(image_hand_id);
         }
-
         body.setOnCheckedChangeListener { radioGroup, i ->
             val color_text = colorValue(view.findViewById<RadioButton>(color.checkedRadioButtonId).text.toString());
             val body_text = bodyValue(view.findViewById<RadioButton>(body.checkedRadioButtonId).text.toString());
@@ -135,6 +101,92 @@ class DesignFragment : Fragment() {
             image_body.setImageResource(image_body_id);
         }
 
+        submitButton.setOnClickListener {
+            Log.i("DESIGN", "Button pressed")
+            var designNameText = designName.text.toString()
+            if (designNameText == null) { designNameText = "Custom Jacket" }
+
+            val selSize = view.findViewById<RadioButton>(size.checkedRadioButtonId).text.toString();
+            val selColor = view.findViewById<RadioButton>(color.checkedRadioButtonId).text.toString();
+            val selHead = view.findViewById<RadioButton>(head.checkedRadioButtonId).text.toString();
+            val selHand = view.findViewById<RadioButton>(hand.checkedRadioButtonId).text.toString();
+            val selBody = view.findViewById<RadioButton>(body.checkedRadioButtonId).text.toString();
+
+            val images = HashMap<String, String>()
+            images["front-image"] = ""
+            images["back-image"] = ""
+
+            val imagesPosition = HashMap<String, HashMap<String, String>>()
+            val imagesPositionFrontimage = HashMap<String, String>()
+            val imagesPositionBackimage = HashMap<String, String>()
+
+            imagesPositionFrontimage["position"] = "tengah"
+            imagesPositionFrontimage["size"] = "80"
+            imagesPosition["front-image"] = imagesPositionFrontimage
+
+            imagesPositionBackimage["position"] = "tengah"
+            imagesPositionBackimage["size"] = "80"
+            imagesPosition["back-image"] = imagesPositionBackimage
+
+            val details = HashMap<String, String>()
+            details["size"] = selSize
+            details["warna"] = colorValue(selColor)
+            details["bahan"] = "fleece"
+            details["kepala"] = headValue(selHead)
+            details["tangan"] = handValue(selHand)
+            details["badan"] = bodyValue(selBody)
+
+            val imagesJson = JsonObject(images)
+            val detailsJSON = JsonObject(details)
+            val imagesPositionJson = JsonObject(imagesPosition)
+
+            val price = calculatePrice(details)
+
+            var shareInt: Int = 0
+
+            if (share.isChecked) {
+                shareInt = 1;
+            }
+
+            Log.i("DESIGN", "ID: " + userId.toString())
+            Log.i("DESIGN", "Nama: $designNameText")
+            Log.i("DESIGN", "Details: " + detailsJSON.toJsonString())
+            Log.i("DESIGN", "Images: " + imagesJson.toJsonString())
+            Log.i("DESIGN", "ImagesPosition: " + imagesPositionJson.toJsonString())
+            Log.i("DESIGN", "Price: $price")
+            Log.i("DESIGN", "Share: $shareInt")
+
+            if (userId != null) {
+                RetrofitClient.instance.createDesign(
+                    user_id = userId,
+                    design_name = designNameText,
+                    details = detailsJSON.toJsonString(),
+                    images = imagesJson.toJsonString(),
+                    images_position = imagesPositionJson.toJsonString(),
+                    information = "No Information",
+                    price = price,
+                    share = shareInt
+                ).enqueue(object: Callback<DesignResponse> {
+                    override fun onResponse(
+                        call: Call<DesignResponse>,
+                        response: Response<DesignResponse>
+                    ) {
+                        if (response.isSuccessful) {
+                            Log.i("DESIGN", response.body().toString())
+                            Toast.makeText(getContext(), "Design berhasil terbuat!", Toast.LENGTH_LONG).show()
+                        } else {
+                            Log.i("DESIGN", "Design gagal dibuat: CODE" + response.code())
+                            Toast.makeText(getContext(), "Design gagal dibuat: CODE" + response.code(), Toast.LENGTH_LONG).show()
+                        }
+                    }
+                    override fun onFailure(call: Call<DesignResponse>, t: Throwable) {
+                        Toast.makeText(getContext(), t.message, Toast.LENGTH_LONG).show()
+                    }
+                })
+            } else {
+                Toast.makeText(getContext(), "User belum Login!", Toast.LENGTH_LONG).show()
+            }
+        }
         return view
     }
 
@@ -185,5 +237,52 @@ class DesignFragment : Fragment() {
         } else{
             "";
         }
+    }
+
+    private fun calculatePrice(details: HashMap<String, String>) :Int
+    {
+        var price = 70000;
+
+        var bahan = details["bahan"]
+        var warna = details["warna"]
+        var kepala = details["kepala"]
+        var tangan = details["tangan"]
+        var badan = details["badan"]
+
+        Log.i("DESIGN", "details: $bahan $warna $kepala $tangan $badan")
+
+        if (bahan == "fleece")
+        {
+            price += 40000
+        } else if (bahan == "baby-terry")
+        {
+            price += 30000
+        }
+
+        if (kepala == "kepala1")
+        {
+            price += 5000
+        } else if (kepala == "kepala2")
+        {
+            price += 10000
+        }
+
+        if (tangan == "tangan1")
+        {
+            price += 15000
+        } else if (tangan == "tangan2") {
+            price += 10000
+        } else if (tangan == "tangan3") {
+            price += 5000
+        }
+
+        if (badan == "badan1") {
+            price += 5000
+        } else if (badan == "badan2")
+        {
+            price += 15000
+        }
+
+        return price
     }
 }

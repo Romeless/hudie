@@ -52,10 +52,13 @@ interface HudieApi {
     @GET("designs")
     fun getDesigns(): Call<ArrayList<DesignResponse>>
 
+    @GET("designs/share")
+    fun getSharableDesigns(): Call<ArrayList<DesignResponse>>
+
     @POST("designs/create")
     @FormUrlEncoded
     fun createDesign(
-        @Field("userId") user_id: Int,
+        @Field("userID") user_id: Int,
         @Field("designName") design_name: String,
         @Field("details") details: String,
         @Field("images") images: String? = null,
