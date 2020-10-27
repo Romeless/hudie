@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.util.Log
 import android.widget.*
 import com.example.hudie.R
@@ -28,6 +29,9 @@ class LoginActivity : AppCompatActivity() {
         window.statusBarColor = getColor(R.color.royalblue);
         window.navigationBarColor = getColor(R.color.royalblue);
         supportActionBar?.hide();
+
+        var setting = PreferenceManager.getDefaultSharedPreferences(this);
+        var editor = setting.edit();
 
         // get reference to all views
         val etUsername = findViewById<EditText>(R.id.et_user_name)
@@ -70,14 +74,12 @@ class LoginActivity : AppCompatActivity() {
                     val id: String = response.body()?.user_id.toString()
                     val role: String = response.body()?.admin.toString()
 
-                    var setting = getSharedPreferences("Hudie", 0);
-                    var editor = setting.edit();
+                    editor.putString("token", token);
 
-                    editor.putString("token", token)
-                    editor.putString("username", username)
-                    editor.putString("user_id", id)
-                    editor.putString("role", role)
-                    editor.commit()
+                    editor.putString("username", username);
+                    editor.putString("user_id", id);
+                    editor.apply();
+                    Log.i("token", "bisa euyy");
 
                     val intent = Intent(this@LoginActivity, MainActivity::class.java);
                     startActivity(intent);

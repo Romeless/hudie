@@ -3,6 +3,7 @@ package com.example.hudie.activities
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.hudie.models.Models
@@ -18,8 +19,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var setting = getSharedPreferences("Hudie", 0);
+        var setting = PreferenceManager.getDefaultSharedPreferences(this);
         var editor = setting.edit();
+
 
         var localtoken = setting.getString("token", " ").toString();
         var servertoken = Models();
