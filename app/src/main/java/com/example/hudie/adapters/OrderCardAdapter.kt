@@ -37,6 +37,7 @@ class OrderCardAdapter(private val orderList: ArrayList<OrderResponse>) : Recycl
         var orderDetails: String = ""
         var orderImages: String = ""
         var orderImagesPosition: String = ""
+        var orderStatus: Int = 0
 
         var context: Context = itemView.context
 
@@ -74,10 +75,13 @@ class OrderCardAdapter(private val orderList: ArrayList<OrderResponse>) : Recycl
         viewHolder.qty.text = orderList[i].qty.toString()
         viewHolder.address.text = orderList[i].address
         viewHolder.price.text = orderList[i].price.toString()
+        viewHolder.orderStatus = orderList[i].status
 
         viewHolder.pay.setOnClickListener {
             val intent = Intent(context, PaymentActivity::class.java)
-            intent.putExtra("order_id", viewHolder.orderID)
+            intent.putExtra("order_id", orderList[i].id)
+            intent.putExtra("price", orderList[i].price.toString().toInt())
+            intent.putExtra("status", orderList[i].status)
             viewHolder.context.startActivity(intent);
         }
 

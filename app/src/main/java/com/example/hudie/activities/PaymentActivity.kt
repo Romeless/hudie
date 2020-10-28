@@ -43,48 +43,27 @@ class PaymentActivity : AppCompatActivity() {
 
         var setting = PreferenceManager.getDefaultSharedPreferences(this);
 
-        var userID = setting.getInt("user_id", 0)
+        var userID = setting.getString("user_id", "0")?.toInt()
         var token = setting.getString("token", "")
         val orderID = intent.getIntExtra("order_id", 0 )
-        var orderDesignID = 0
-        var orderStatus = 0
-        var orderPrice = 0
+        val orderPrice = intent.getIntExtra("price", 0)
+        val orderStatus = intent.getIntExtra("status", 0)
 
-        RetrofitClient.instance.showOrder(orderID).enqueue(object: Callback<OrderResponse> {
-            override fun onResponse(call: Call<OrderResponse>, response: Response<OrderResponse>) {
-                if(response.isSuccessful){
-                    Log.i("PAYMENT", "Order Fetch Detail Complete")
-
-                    orderStatus = response.body()?.status!!
-                    orderPrice = response.body()?.price!!
-                    orderDesignID = response.body()?.designID!!
-                } else {
-                    Log.i("PAYMENT", response.body().toString())
-                    Toast.makeText(applicationContext, "Failed to get Order Details", Toast.LENGTH_LONG)
-                }
-            }
-
-            override fun onFailure(call: Call<OrderResponse>, t: Throwable) {
-                Log.i("PAYMENT", t.message.toString())
-                Toast.makeText(applicationContext, "Failed to get Order Details", Toast.LENGTH_LONG)
-            }
-
-        })
+        Log.i("PAYMENT", "status: " + orderStatus)
+        Log.i("PAYMENT", "price: " + orderPrice)
 
         if (orderStatus != 1) {
             Toast.makeText(applicationContext, "Order status is not Unpaid!", Toast.LENGTH_LONG)
         }
 
-        tvHarga.text = (orderPrice - userID).toString()
+        tvHarga.text = (orderPrice - userID!!).toString()
 
         val submitPayment = findViewById<Button>(R.id.payment_submit)
         submitPayment.setOnClickListener {
             RetrofitClient.instance.updateOrder(
                 orderID = orderID,
                 userID = userID,
-                designID = orderDesignID,
                 status = 3,
-                price = orderPrice,
                 token = token.toString()
             ).enqueue(object: Callback<OrderResponse> {
                 override fun onResponse(

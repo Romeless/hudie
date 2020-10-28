@@ -91,7 +91,9 @@ class OrderActivity : AppCompatActivity() {
                 //
             }
             override fun afterTextChanged(s: Editable?) {
-                price.text = (qty.text.toString().toInt() * pricePerQty + 20000).toString()
+                if (qty.text.toString() != "") {
+                    price.text = (qty.text.toString().toInt() * pricePerQty + 20000).toString()
+                }
             }
         })
 

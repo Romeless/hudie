@@ -114,7 +114,7 @@ interface HudieApi {
     fun updateOrder(
         @Path("id") orderID :Int,
         @Field("userID") userID: Int,
-        @Field("designID") designID: Int,
+        @Field("designID") designID: Int? = null,
         @Field("qty") qty: Int? = null,
         @Field("address") address: String? = null,
         @Field("information") information: String? = null,
