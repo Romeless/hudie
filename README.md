@@ -16,7 +16,7 @@ This app serves as a shop for custom shirt and jacket, with the option to design
 | 1  | 1        | Login to the application   | As an unauthorized member, I want to login to my account                         | DONE        |
 | 2  | 2        | Register a new account     | As an unauthorized user, I want to register a new account with my Google Account | DONE        |
 | 3  | 3        | Home of the application    | As a user, I want to able to navigate between the different pages of the app     | DONE        |
-| 4  | 4        | Custom Design Activity     | As a user, I want to design my own product as promised by the app                | In Progress |
+| 4  | 4        | Custom Design Activity     | As a user, I want to design my own product as promised by the app                | DONE        |
 | 5  | 5        | Order Design               | As a user, I want to order my design or the design in the app                    | TODO        |
 | 6  | 6        | Order Confirmation         | As an admin, I want to confirm or reject an order                                | TODO        |
 | 7  | 7        | Design Shop Activity       | As a user, I want to see complete designs offered by the app                     | TODO        |
@@ -36,11 +36,61 @@ This app serves as a shop for custom shirt and jacket, with the option to design
 | ID | Tasks                               | Progress       | Taker |
 |----|-------------------------------------|-------------|----------|
 | 4  | Custom Design Activity              | \-          | \-       |
-|    | Design Jacket Class                 | TODO        |          |
-|    | Design Jacket View                  | TODO        |          |
-|    | Design Option Class                 | TODO        |          |
-|    | Design Option View                  | In Progress | Luthfi   |
-|    | POST Design to API                  | TODO        |          |
-|    | See Designs in Profile              | TODO        |          |
+|    | Design Jacket Class                 | DONE        | Luthfi   |
+|    | Design Jacket View                  | DONE        | Luthfi   |
+|    | Design Option Class                 | DONE        | Luthfi   |
+|    | Design Option View                  | DONE        | Luthfi   |
+|    | POST Design to API                  | DONE        | Luthfi   |
+|    | See Designs in Profile              | DONE        | Luthfi   |
+
+| ID | Tasks                               | Progress       | Taker |
+|----|-------------------------------------|-------------|----------|
+| 5  | Order Design Activity              | \-          | \-       |
+|    | Order Jacket Class                 | DONE        | Rama   |
+|    | Order Jacket View                  | DONE        | Rama   |
+|    | POST Order to API                  | DONE        | Rama   |
+|    | See Order in Profile              | DONE        | Rama   |
+
+| ID | Tasks                               | Progress       | Taker |
+|----|-------------------------------------|-------------|----------|
+| 6  | Order Confirmation Activity              | \-          | \-       |
+|    | Order Confirmation Class                 | DONE        | Rama   |
+|    | Order Confirmation View                  | DONE        | Rama   |
+|    | POST Confirmation to API                  | DONE        | Rama   |
+
+| ID | Tasks                               | Progress       | Taker |
+|----|-------------------------------------|-------------|----------|
+| 7  | Design Shop Activity              | \-          | \-       |
+|    | Design Shop Class                 | DONE        | Rama   |
+|    | Design Shop View                  | DONE        | Rama   |
+|    | GET Design Shop from API                  | DONE        | Rama   |
+
+| ID | Tasks                               | Progress       | Taker |
+|----|-------------------------------------|-------------|----------|
+| 8  | Profile Information Activity              | \-          | \-       |
+|    | Profile Information Class                 | DONE        | Luthfi   |
+|    | Profile Information View                  | DONE        | Luthfi   |
+|    | GET Profile from API                  | DONE        | Luthfi   |
+
+| ID | Tasks                               | Progress       | Taker |
+|----|-------------------------------------|-------------|----------|
+| 9  | Profile Information Change Activity              | \-          | \-       |
+|    | Post Profile Change to API                  | DONE        | Luthfi   |
 
 
+| ID | Tasks                               | Progress       | Taker |
+|----|-------------------------------------|-------------|----------|
+| 10  | Log In with Google              | \-          | \-       |
+|    | Implement Google Login Button in App                  | DONE        | Rama   |
+|    | POST Google Account to API                  | DONE        | Rama   |
+
+| ID | Tasks                               | Progress       | Taker |
+|----|-------------------------------------|-------------|----------|
+| 11  | Register with Google              | \-          | \-       |
+|    | Implement Google Login Button in App                  | DONE        | Rama   |
+|    | POST Google Account to API                  | DONE        | Rama   |
+
+| ID | Tasks                               | Progress       | Taker |
+|----|-------------------------------------|-------------|----------|
+| 14  | Log out              | \-          | \-       |
+|    | Implement Log out to App                  | DONE        | Luthfi   |
