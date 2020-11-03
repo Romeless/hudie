@@ -75,10 +75,7 @@ class PaymentActivity : AppCompatActivity() {
                         Log.i("ORDER", response.body().toString())
                         Toast.makeText(applicationContext, "Order Status Update Completed", Toast.LENGTH_LONG)
 
-                        val intent = Intent(applicationContext, MyOrder::class.java)
-                        applicationContext.startActivity(intent)
-                        finish()
-
+                        recreate()
                     } else {
                         Log.i("ORDER", response.body().toString())
                         Toast.makeText(applicationContext, "Order Status Update Failed", Toast.LENGTH_LONG)
@@ -89,7 +86,6 @@ class PaymentActivity : AppCompatActivity() {
                     Log.i("ORDER", t.message.toString())
                     Toast.makeText(applicationContext, "Order Status Update Failed", Toast.LENGTH_LONG)
                 }
-
             })
         }
     }

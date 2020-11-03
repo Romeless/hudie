@@ -97,10 +97,11 @@ class LoginActivity : AppCompatActivity() {
                     val role: String = response.body()?.admin.toString()
 
                     editor.putString("token", token);
-
                     editor.putString("username", username);
                     editor.putString("user_id", id);
-                    editor.apply();
+                    editor.putString("role", role);
+                    editor.commit();
+
                     Log.i("token", "bisa euyy");
 
                     val intent = Intent(this@LoginActivity, MainActivity::class.java);
