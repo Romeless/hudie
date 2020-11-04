@@ -31,6 +31,80 @@ This app serves as a shop for custom shirt and jacket, with the option to design
 
 ## Sprint Backlog
 
+### Sprint 2
+
+| ID | Tasks                               | Taker        | Progress |
+|----|-------------------------------------|--------------|----------|
+| 1  | Login to the application            | -            | -        |
+|    | Login Activity Class                | In Progress  | Rama     |
+|    | Login Activity Class XML            | In Progress  | Luthfi   |
+|    | Connecting Login Activity to API    | TODO  |      |
+| 2  | Register a new account              | -     | -        |
+|    | Register Activity Class             | TODO  |      |
+|    | Register Activity XML               | TODO  |    |
+|    | Connecting Register Activity to API | TODO  |      |
+
+### Sprint 3
+
+| ID | Tasks                               | Taker        | Progress |
+|----|-------------------------------------|--------------|----------|
+| 1  | Login to the application            | -            | -        |
+|    | Login Activity Class                | In Progress  | Rama     |
+|    | Login Activity Class XML            | In Progress  | Luthfi   |
+|    | Connecting Login Activity to API    | TODO  |      |
+| 2  | Register a new account              | -     | -        |
+|    | Register Activity Class             | TODO  |      |
+|    | Register Activity XML               | TODO  |    |
+|    | Connecting Register Activity to API | TODO  |      |
+
+### Sprint 4
+
+| ID | Tasks                               | Progress       | Taker |
+|----|-------------------------------------|-------------|----------|
+| 1  | Login to the application            | \-          | \-       |
+|    | Login Activity Class                | DONE        | Rama     |
+|    | Login Activity Class XML            | DONE        | Luthfi   |
+|    | Connecting Login Activity to API    | DONE        | Rama     |
+| 2  | Register a new account              | \-          | \-       |
+|    | Register Activity Class             | DONE        | Rama     |
+|    | Register Activity XML               | DONE        | Luthfi   |
+|    | Connecting Register Activity to API | DONE        | Rama     |
+| 3  | Home of the application             | \-          | \-       |
+|    | Navigation Bottom Menu XML          | DONE        | Rama     |
+|    | Main Activity Class                 | DONE        | Luthfi   |
+|    | Main Activity View                  | DONE        | Luthfi   |
+| 4  | Custom Design Activity              | \-          | \-       |
+|    | Design Jacket Class                 | TODO        |          |
+|    | Design Jacket View                  | TODO        |          |
+|    | Design Option Class                 | TODO        |          |
+|    | Design Option View                  | In Progress | Luthfi   |
+|    | POST Design to API                  | TODO        |          |
+|    | See Designs in Profile              | TODO        |          |
+
+### Sprint 5
+
+| ID | Tasks                               | Progress       | Taker |
+|----|-------------------------------------|-------------|----------|
+| 4  | Custom Design Activity              | \-          | \-       |
+|    | Design Jacket Class                 | TODO        |          |
+|    | Design Jacket View                  | TODO        |          |
+|    | Design Option Class                 | TODO        |          |
+|    | Design Option View                  | In Progress | Luthfi   |
+|    | POST Design to API                  | TODO        |          |
+|    | See Designs in Profile              | TODO        |          |
+
+### Sprint 6
+
+| ID | Tasks                               | Progress       | Taker |
+|----|-------------------------------------|-------------|----------|
+| 4  | Custom Design Activity              | \-          | \-       |
+|    | Design Jacket Class                 | TODO        |          |
+|    | Design Jacket View                  | TODO        |          |
+|    | Design Option Class                 | TODO        |          |
+|    | Design Option View                  | In Progress | Luthfi   |
+|    | POST Design to API                  | TODO        |          |
+|    | See Designs in Profile              | TODO        |          |
+
 ### Sprint 7
 
 | ID | Tasks                               | Progress       | Taker |
@@ -42,48 +116,26 @@ This app serves as a shop for custom shirt and jacket, with the option to design
 |    | Design Option View                  | DONE        | Luthfi   |
 |    | POST Design to API                  | DONE        | Luthfi   |
 |    | See Designs in Profile              | DONE        | Luthfi   |
-
-| ID | Tasks                               | Progress       | Taker |
-|----|-------------------------------------|-------------|----------|
 | 5  | Order Design Activity              | \-          | \-       |
 |    | Order Jacket Class                 | DONE        | Rama   |
 |    | Order Jacket View                  | DONE        | Rama   |
 |    | POST Order to API                  | DONE        | Rama   |
 |    | See Order in Profile              | DONE        | Rama   |
-
-| ID | Tasks                               | Progress       | Taker |
-|----|-------------------------------------|-------------|----------|
 | 7  | Design Shop Activity              | \-          | \-       |
 |    | Design Shop Class                 | DONE        | Rama   |
 |    | Design Shop View                  | DONE        | Rama   |
 |    | GET Design Shop from API                  | DONE        | Rama   |
-
-| ID | Tasks                               | Progress       | Taker |
-|----|-------------------------------------|-------------|----------|
 | 8  | Profile Information Activity              | \-          | \-       |
 |    | Profile Information Class                 | DONE        | Luthfi   |
 |    | Profile Information View                  | DONE        | Luthfi   |
 |    | GET Profile from API                  | DONE        | Luthfi   |
-
-| ID | Tasks                               | Progress       | Taker |
-|----|-------------------------------------|-------------|----------|
 | 9  | Profile Information Change Activity              | \-          | \-       |
 |    | Post Profile Change to API                  | DONE        | Luthfi   |
-
-
-| ID | Tasks                               | Progress       | Taker |
-|----|-------------------------------------|-------------|----------|
 | 10  | Log In with Google              | \-          | \-       |
 |    | Implement Google Login Button in App                  | DONE        | Rama   |
 |    | POST Google Account to API                  | DONE        | Rama   |
-
-| ID | Tasks                               | Progress       | Taker |
-|----|-------------------------------------|-------------|----------|
 | 11  | Register with Google              | \-          | \-       |
 |    | Implement Google Login Button in App                  | DONE        | Rama   |
 |    | POST Google Account to API                  | DONE        | Rama   |
-
-| ID | Tasks                               | Progress       | Taker |
-|----|-------------------------------------|-------------|----------|
 | 14  | Log out              | \-          | \-       |
 |    | Implement Log out to App                  | DONE        | Luthfi   |
