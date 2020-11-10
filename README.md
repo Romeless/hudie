@@ -28,6 +28,8 @@ This app serves as a shop for custom shirt and jacket, with the option to design
 | 13 | 13       | Edit existing design       | As a user, I want to edit an existing design                                     | TODO        |
 | 14 | 14       | Log Out                    | As a user, I want to log out of the application                                  | DONE        |
 | 15 | 15       | Ban / Monitor User         | As an admin, I want to monitor other user                                        | TODO        |
+| 16 | 16       | Google Drive               | As an admin, I want to save uploaded files/images to GDrive                      | TODO        |
+| 17 | 17       | Upload Design              | User, I want to upload my own design from my image (JPG/PNG)                     | TODO        |
 
 ## Sprint Backlog
 
