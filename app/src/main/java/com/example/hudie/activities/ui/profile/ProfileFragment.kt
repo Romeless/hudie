@@ -63,6 +63,7 @@ class ProfileFragment : Fragment() {
             editor.clear().commit();
             val intent = Intent(this.context, MainActivity::class.java);
             startActivity(intent);
+            activity?.finish()
         }
 
         return view
