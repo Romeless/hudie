@@ -170,6 +170,7 @@ class LoginActivity : AppCompatActivity() {
                         var setting = PreferenceManager.getDefaultSharedPreferences(applicationContext);
                         var editor = setting.edit();
 
+                        Log.i("login euyyy", response.body().toString())
                         editor.putString("token", response.body()?.token)
                         editor.putString("username", response.body()?.username)
                         editor.putString("user_id", response.body()?.user_id)

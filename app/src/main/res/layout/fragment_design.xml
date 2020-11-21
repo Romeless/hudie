@@ -74,18 +74,23 @@
             android:orientation="vertical"
             app:layout_constraintTop_toTopOf="@+id/images">
 
-            <EditText
-                android:id="@+id/design_name"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-                android:background="@drawable/design_name_input"
-                android:hint="DesignName"
-                android:padding="20dp"
-                android:textAlignment="center"
-                android:textColor="#444444"
-                android:textColorHint="#777777"
-                />
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/design_name"
+                    android:layout_marginVertical="10dp"
+
+                    android:hint="DesignName"
+                    android:padding="20dp"
+                    android:textAlignment="center"
+                    android:textColor="#444444"
+                    android:textColorHint="#777777"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -100,49 +105,56 @@
                 android:layout_gravity="center"
                 android:checkedButton="@id/s"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                >
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:flexWrap="wrap"
+                    >
+                    <RadioButton
+                        android:id="@+id/s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="S" />
 
-                <RadioButton
-                    android:id="@+id/s"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="S" />
+                    <RadioButton
+                        android:id="@+id/m"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="M" />
 
-                <RadioButton
-                    android:id="@+id/m"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="M" />
+                    <RadioButton
+                        android:id="@+id/l"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="L" />
 
-                <RadioButton
-                    android:id="@+id/l"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="L" />
+                    <RadioButton
+                        android:id="@+id/xl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="XL" />
 
-                <RadioButton
-                    android:id="@+id/xl"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="XL" />
+                    <RadioButton
+                        android:id="@+id/xxl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="2XL" />
 
-                <RadioButton
-                    android:id="@+id/xxl"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="2XL" />
+                    <RadioButton
+                        android:id="@+id/xxxl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="3XL" />
 
-                <RadioButton
-                    android:id="@+id/xxxl"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:text="3XL" />
+                </com.google.android.flexbox.FlexboxLayout>
 
             </RadioGroup>
 
@@ -170,21 +182,18 @@
                     android:id="@+id/navy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:text="Navy" />
 
                 <RadioButton
                     android:id="@+id/grey"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:text="Grey" />
 
                 <RadioButton
                     android:id="@+id/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:text="Black" />
 
             </RadioGroup>
@@ -213,14 +222,12 @@
                     android:id="@+id/kepala1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:text="Type 1" />
 
                 <RadioButton
                     android:id="@+id/kepala2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:text="Type 2" />
             </RadioGroup>
 
@@ -248,21 +255,18 @@
                     android:id="@+id/tangan1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:text="Type 1" />
 
                 <RadioButton
                     android:id="@+id/tangan2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:text="Type 2" />
 
                 <RadioButton
                     android:id="@+id/tangan3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:text="Type 3" />
             </RadioGroup>
 
@@ -290,14 +294,12 @@
                     android:id="@+id/badan1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:text="Type 1" />
 
                 <RadioButton
                     android:id="@+id/badan2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:text="Type 2" />
 
                 />
