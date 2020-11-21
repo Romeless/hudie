@@ -12,6 +12,7 @@ import com.beust.klaxon.JsonObject
 import com.example.hudie.R
 import com.example.hudie.api.RetrofitClient
 import com.example.hudie.models.DesignResponse
+import com.hopenlib.flextools.FlexRadioGroup
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -33,7 +34,7 @@ class DesignFragment : Fragment() {
         val context = this.context;
         val submitButton: Button = view.findViewById<Button>(R.id.submit_design)
 
-        val size: RadioGroup = view.findViewById<RadioGroup>(R.id.size)
+        val size = view.findViewById<FlexRadioGroup>(R.id.size)
         val color: RadioGroup = view.findViewById<RadioGroup>(R.id.color)
         val head: RadioGroup = view.findViewById<RadioGroup>(R.id.kepala)
         val hand: RadioGroup = view.findViewById<RadioGroup>(R.id.tangan)

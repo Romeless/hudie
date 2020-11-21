@@ -12,6 +12,7 @@ import com.example.hudie.R
 import com.example.hudie.api.RetrofitClient
 import com.example.hudie.models.DesignDetails
 import com.example.hudie.models.DesignResponse
+import com.hopenlib.flextools.FlexRadioGroup
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -26,7 +27,7 @@ class DetailsActivity : AppCompatActivity() {
 
         val submitButton: Button = findViewById<Button>(R.id.submit_design)
 
-        val size: RadioGroup = findViewById<RadioGroup>(R.id.size)
+        val size = findViewById<FlexRadioGroup>(R.id.size)
         val color: RadioGroup = findViewById<RadioGroup>(R.id.color)
         val head: RadioGroup = findViewById<RadioGroup>(R.id.kepala)
         val hand: RadioGroup = findViewById<RadioGroup>(R.id.tangan)
