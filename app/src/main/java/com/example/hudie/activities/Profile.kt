@@ -1,9 +1,11 @@
 package com.example.hudie.activities
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.util.Log
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -34,6 +36,40 @@ class Profile : AppCompatActivity() {
         val phone_text = findViewById<EditText>(R.id.profile_phone_number);
         val email = findViewById<TextView>(R.id.profile_email);
 
+        username_text.setOnFocusChangeListener { view, b ->
+            if ( !b ){
+                val imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager;
+                imm.hideSoftInputFromWindow(view.windowToken, 0);
+            }
+        }
+
+        fullname_text.setOnFocusChangeListener{ view, b ->
+            if ( !b ){
+                val imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager;
+                imm.hideSoftInputFromWindow(view.windowToken, 0);
+            }
+        }
+
+        address_text.setOnFocusChangeListener { view, b ->
+            if ( !b ){
+                val imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager;
+                imm.hideSoftInputFromWindow(view.windowToken, 0);
+            }
+        }
+
+        phone_text.setOnFocusChangeListener { view, b ->
+            if ( !b ){
+                val imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager;
+                imm.hideSoftInputFromWindow(view.windowToken, 0);
+            }
+        }
+
+        email.setOnFocusChangeListener { view, b ->
+            if ( !b ){
+                val imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager;
+                imm.hideSoftInputFromWindow(view.windowToken, 0);
+            }
+        }
         RetrofitClient.instance.showUser(
             setting.getString("user_id", "0").toString().toInt()
         ).enqueue(object: retrofit2.Callback<UserResponse> {

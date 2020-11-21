@@ -7,6 +7,9 @@
     tools:context=".activities.ui.design.DesignFragment"
     android:background="@color/whitesmoke"
     android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout

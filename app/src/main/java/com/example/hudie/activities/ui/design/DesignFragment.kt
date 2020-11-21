@@ -1,11 +1,13 @@
 package com.example.hudie.activities.ui.design
 
+import android.content.Context
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.fragment.app.Fragment
 import com.beust.klaxon.JsonObject
@@ -47,6 +49,12 @@ class DesignFragment : Fragment() {
         var setting = PreferenceManager.getDefaultSharedPreferences(getContext());
         var userId = setting?.getString("user_id", "0")?.toInt()
 
+        designName.setOnFocusChangeListener { view, b ->
+            if ( !b ){
+                val imm = this.activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager;
+                imm.hideSoftInputFromWindow(view.windowToken, 0);
+            }
+        }
         color.setOnCheckedChangeListener { radioGroup, i ->
             val color_text = colorValue(view.findViewById<RadioButton>(color.checkedRadioButtonId).text.toString());
             val body_text = bodyValue(view.findViewById<RadioButton>(body.checkedRadioButtonId).text.toString());

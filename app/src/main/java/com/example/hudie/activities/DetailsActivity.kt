@@ -1,9 +1,11 @@
 package com.example.hudie.activities
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.util.Log
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.beust.klaxon.JsonObject
@@ -37,6 +39,12 @@ class DetailsActivity : AppCompatActivity() {
 
         val designName = findViewById<EditText>(R.id.design_name)
 
+        designName.setOnFocusChangeListener { view, b ->
+            if ( !b ){
+                val imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager;
+                imm.hideSoftInputFromWindow(view.windowToken, 0);
+            }
+        }
 
         var setting = PreferenceManager.getDefaultSharedPreferences(applicationContext)
         var userId = setting?.getString("user_id", "0")?.toInt()
