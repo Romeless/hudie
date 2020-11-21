@@ -41,7 +41,6 @@
         android:layout_marginTop="176dp"
         android:backgroundTint="#ffffff"
         android:text="Profile"
-        android:drawableLeft="@drawable/ic_baseline_edit_24"
         android:textColor="#000000"
         android:textSize="20sp"
         android:translationZ="3dp"
