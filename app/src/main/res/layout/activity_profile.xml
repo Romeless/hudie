@@ -14,13 +14,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="top"
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="User Name"
                 android:layout_margin="20dp"
                 android:layout_height="wrap_content"
                 app:hintAnimationEnabled="true"
@@ -31,7 +30,7 @@
                     android:id="@+id/profile_username"
                     android:textColor="#444444"
                     android:textColorHint="#777777"
-
+                    android:hint="User Name"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -112,7 +111,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/profile_submit"
-                android:layout_gravity="center"
+                android:layout_gravity="left"
+                android:layout_margin="20dp"
                 android:text="SAVE"/>
 
         </LinearLayout>
