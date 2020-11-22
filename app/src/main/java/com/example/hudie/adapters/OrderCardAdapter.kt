@@ -24,6 +24,7 @@ import com.example.hudie.api.RetrofitClient
 import com.example.hudie.models.DesignDetails
 import com.example.hudie.models.DesignResponse
 import com.example.hudie.models.OrderResponse
+import kotlinx.android.synthetic.main.cardview_order.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -43,6 +44,7 @@ class OrderCardAdapter(private val orderList: ArrayList<OrderResponse>) : Recycl
         var orderImagesPosition: String = ""
         var orderStatus: Int = 0
         var context: Context = itemView.context
+
 
         var status: TextView = itemView.findViewById<TextView>(R.id.order_status)
         var address: TextView = itemView.findViewById<TextView>(R.id.address_order)
@@ -75,6 +77,7 @@ class OrderCardAdapter(private val orderList: ArrayList<OrderResponse>) : Recycl
         viewHolder.orderID = orderList[i].id
         viewHolder.designID = orderList[i].designID!!
         viewHolder.orderStatus = orderList[i].status
+
 
         viewHolder.orderDetails = orderList[i].details.toString()
         viewHolder.orderImages = orderList[i].images.toString()
@@ -222,6 +225,7 @@ class OrderCardAdapter(private val orderList: ArrayList<OrderResponse>) : Recycl
             0 -> return "Other"
             1 -> return "Unpaid"
             2 -> return "Paid"
+
             3 -> return "In Process"
             4 -> return "In Shipment"
             5 -> return "Received"

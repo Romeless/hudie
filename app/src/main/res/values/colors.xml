@@ -10,4 +10,6 @@
     <color name="royalblue" >#4169e1</color>
     <color name="dark_royalblue">#3a5eca</color>
     <color name="transparent">#00000000</color>
-</resources>
+    <color name="error">#f44336</color>
+    <color name="warning">#ffc107</color>
+</resources>    

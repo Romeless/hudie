@@ -63,68 +63,90 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/order_status"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/images"
-            android:textSize="30sp"
-            android:layout_marginLeft="16dp"/>
+
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/address_order"
+            android:text="address"
             app:layout_constraintLeft_toRightOf="@id/images"
-            app:layout_constraintTop_toBottomOf="@id/order_status"
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginLeft="16dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/price_order"
+            android:text="price"
             app:layout_constraintLeft_toRightOf="@id/images"
             app:layout_constraintTop_toBottomOf="@id/address_order"
             android:layout_marginLeft="16dp"/>
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/finish_button"
-            android:text="Finish"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:visibility="gone"
-            />
-        <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/order_status"
+            android:text="status"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@id/bottom_row"
+            app:layout_constraintLeft_toRightOf="@id/images"
+            android:textSize="11sp"
+            android:layout_marginLeft="16dp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/pay_button"
-            android:text="Pay"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/complain_order"
-            android:text="Complain"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/finish_button"
-            android:layout_marginTop="8dp"
-            android:visibility="gone"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cancel_order_button"
-            android:text="Cancel"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/pay_button"
-            android:layout_marginTop="8dp"
-            />
+            app:layout_constraintTop_toBottomOf="@id/images"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:orientation="horizontal"
+            android:id="@+id/bottom_row"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/finish_button"
+                android:text="Finish"
+                app:layout_constraintRight_toLeftOf="@id/complain_order"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"
+                android:layout_marginRight="16dp"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pay_button"
+                android:text="Pay"
+                app:layout_constraintRight_toLeftOf="@id/cancel_order_button"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="16dp"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/complain_order"
+                android:text="Complain"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"
+                android:backgroundTint="@color/warning"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cancel_order_button"
+                android:text="Cancel"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:backgroundTint="@color/error"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <View
+            app:layout_constraintTop_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="15dp"
+            android:background="#dddddd" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.cardview.widget.CardView>
