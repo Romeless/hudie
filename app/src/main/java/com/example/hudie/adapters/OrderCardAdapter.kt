@@ -89,9 +89,8 @@ class OrderCardAdapter(private val orderList: ArrayList<OrderResponse>) : Recycl
         if (viewHolder.orderStatus != 1) {
             viewHolder.pay.visibility = View.GONE
             viewHolder.cancel.visibility = View.GONE
-        } else if (viewHolder.orderStatus == 4 || viewHolder.orderStatus == 5) {
-            viewHolder.pay.visibility = View.GONE
-            viewHolder.cancel.visibility = View.GONE
+        }
+        if (viewHolder.orderStatus == 4 || viewHolder.orderStatus == 5) {
             viewHolder.finish.visibility = View.VISIBLE
             viewHolder.complain.visibility = View.VISIBLE
         }
