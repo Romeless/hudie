@@ -33,10 +33,10 @@ class ShopFragment : Fragment(){
         savedInstanceState: Bundle?
     ): View? {
         Log.i("HOME", "onCreateView")
-
         val view = inflater.inflate(R.layout.fragment_shop, container, false);
 
         val mRecyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
+        mRecyclerView.adapter = null;
         mRecyclerView.setHasFixedSize(true)
         mRecyclerView.addItemDecoration(GridSpacingItemDecoration(3, 20, true))
         mRecyclerView.layoutManager = GridLayoutManager(this.context, 3)
@@ -50,7 +50,7 @@ class ShopFragment : Fragment(){
 
                 val designList = response.body()
                 val mRecyclerAdapter = designList?.let { ShopCardAdapter(it)  }
-
+                mRecyclerView.clearAnimation()
                 mRecyclerView.adapter = mRecyclerAdapter
                 mRecyclerAdapter?.notifyDataSetChanged()
             }
@@ -64,4 +64,6 @@ class ShopFragment : Fragment(){
 
         return view
     }
+
 }
+

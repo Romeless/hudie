@@ -60,4 +60,9 @@ class MyOrder : AppCompatActivity() {
         })
 
     }
+
+    override fun onRestart() {
+        super.onRestart()
+        recreate()
+    }
 }
