@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.beust.klaxon.Klaxon
 import com.example.hudie.R
@@ -30,6 +31,8 @@ class ShopCardAdapter(private val designList: ArrayList<DesignResponse>) : Recyc
         var designImagesPosition: String = "";
 
         var context: Context = itemView.context
+
+        var card: CardView = itemView.findViewById<CardView>(R.id.card)
 
         var itemTitle: TextView = itemView.findViewById<TextView>(R.id.design_title)
         var itemDesigner: TextView = itemView.findViewById<TextView>(R.id.design_creator)
@@ -61,19 +64,19 @@ class ShopCardAdapter(private val designList: ArrayList<DesignResponse>) : Recyc
         viewHolder.itemDesigner.text = designList[i].username
         viewHolder.itemDetail.text = designList[i].price.toString()
 
-        viewHolder.detailButton.setOnClickListener {
-            val detailIntent = Intent(viewHolder.context, DetailsActivity::class.java)
-            detailIntent.putExtra("designID", viewHolder.designID)
-            detailIntent.putExtra("details", viewHolder.designDetails)
-            detailIntent.putExtra("images", viewHolder.designImages)
-            detailIntent.putExtra("imagesPosition", viewHolder.designImagesPosition)
-            detailIntent.putExtra("price", viewHolder.itemDetail.text.toString().toInt())
-            detailIntent.putExtra("designName", viewHolder.itemTitle.text.toString())
+//        viewHolder.detailButton.setOnClickListener {
+//            val detailIntent = Intent(viewHolder.context, DetailsActivity::class.java)
+//            detailIntent.putExtra("designID", viewHolder.designID)
+//            detailIntent.putExtra("details", viewHolder.designDetails)
+//            detailIntent.putExtra("images", viewHolder.designImages)
+//            detailIntent.putExtra("imagesPosition", viewHolder.designImagesPosition)
+//            detailIntent.putExtra("price", viewHolder.itemDetail.text.toString().toInt())
+//            detailIntent.putExtra("designName", viewHolder.itemTitle.text.toString())
+//
+//            viewHolder.context.startActivity(detailIntent)
+//        }
 
-            viewHolder.context.startActivity(detailIntent)
-        }
-
-        viewHolder.orderButton.setOnClickListener {
+        viewHolder.card.setOnClickListener {
             val orderIntent = Intent(viewHolder.context, OrderActivity::class.java)
             orderIntent.putExtra("designID", viewHolder.designID)
             orderIntent.putExtra("details", viewHolder.designDetails)

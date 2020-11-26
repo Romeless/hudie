@@ -7,15 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hudie.R
 import com.example.hudie.adapters.ShopCardAdapter
 import com.example.hudie.api.RetrofitClient
+import com.example.hudie.decorations.GridSpacingItemDecoration
 import com.example.hudie.models.DesignResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class ShopFragment : Fragment(){
 
@@ -35,11 +38,8 @@ class ShopFragment : Fragment(){
 
         val mRecyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
         mRecyclerView.setHasFixedSize(true)
-
-        val layoutManager = LinearLayoutManager(this.context)
-        layoutManager.orientation = LinearLayoutManager.VERTICAL
-
-        mRecyclerView.layoutManager = layoutManager
+        mRecyclerView.addItemDecoration(GridSpacingItemDecoration(3, 10, true))
+        mRecyclerView.layoutManager = GridLayoutManager(this.context, 3)
 
         RetrofitClient.instance.getSharableDesigns().enqueue(object: Callback<ArrayList<DesignResponse>> {
             override fun onResponse(
