@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.util.Log
+import android.widget.Space
 import android.widget.Toast
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hudie.R
 import com.example.hudie.adapters.OrderCardAdapter
 import com.example.hudie.api.RetrofitClient
+import com.example.hudie.decorations.GridSpacingItemDecoration
 import com.example.hudie.models.OrderResponse
 import retrofit2.Call
 import retrofit2.Callback
@@ -31,6 +34,7 @@ class MyOrder : AppCompatActivity() {
         val mRecyclerView = findViewById<RecyclerView>(R.id.myorder_recycler_view)
         mRecyclerView.layoutManager = layoutManager
         mRecyclerView.setHasFixedSize(true)
+        mRecyclerView.addItemDecoration(GridSpacingItemDecoration(1, 20, true))
 
         RetrofitClient.instance.userOrder(
             setting.getString("user_id", "0").toString().toInt()
