@@ -5,11 +5,13 @@ import android.os.Bundle
 import android.preference.PreferenceManager
 import android.util.Log
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hudie.R
 import com.example.hudie.adapters.ShopCardAdapter
 import com.example.hudie.api.RetrofitClient
+import com.example.hudie.decorations.GridSpacingItemDecoration
 import com.example.hudie.models.DesignResponse
 import retrofit2.Call
 import retrofit2.Callback
@@ -29,8 +31,9 @@ class MyDesign : AppCompatActivity() {
 
         val context = this;
         val mRecyclerView = findViewById<RecyclerView>(R.id.mydesign_recycler_view)
-        mRecyclerView.layoutManager = layoutManager
         mRecyclerView.setHasFixedSize(true)
+        mRecyclerView.addItemDecoration(GridSpacingItemDecoration(3, 20, true))
+        mRecyclerView.layoutManager = GridLayoutManager(this, 3)
 
         RetrofitClient.instance.userDesign(
             setting.getString("user_id", "0").toString().toInt()

@@ -75,7 +75,8 @@ class PaymentActivity : AppCompatActivity() {
                         Log.i("ORDER", response.body().toString())
                         Toast.makeText(applicationContext, "Order Status Update Completed", Toast.LENGTH_LONG)
 
-                        recreate()
+                        onBackPressed();
+                        recreate();
                     } else {
                         Log.i("ORDER", response.body().toString())
                         Toast.makeText(applicationContext, "Order Status Update Failed", Toast.LENGTH_LONG)

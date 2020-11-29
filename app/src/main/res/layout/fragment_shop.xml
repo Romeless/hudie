@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/container"
+    android:backgroundTint="#ffffff"
     tools:context=".activities.ui.shop.ShopFragment">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -15,6 +16,8 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginHorizontal="4dp"
         android:layout_marginBottom="4dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:backgroundTint="#ffffff"
+        />
 
 </LinearLayout>

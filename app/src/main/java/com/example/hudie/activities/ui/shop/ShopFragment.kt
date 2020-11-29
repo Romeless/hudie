@@ -38,7 +38,7 @@ class ShopFragment : Fragment(){
 
         val mRecyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
         mRecyclerView.setHasFixedSize(true)
-        mRecyclerView.addItemDecoration(GridSpacingItemDecoration(3, 10, true))
+        mRecyclerView.addItemDecoration(GridSpacingItemDecoration(3, 20, true))
         mRecyclerView.layoutManager = GridLayoutManager(this.context, 3)
 
         RetrofitClient.instance.getSharableDesigns().enqueue(object: Callback<ArrayList<DesignResponse>> {
