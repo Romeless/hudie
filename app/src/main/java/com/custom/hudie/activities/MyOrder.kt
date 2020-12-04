@@ -60,4 +60,9 @@ class MyOrder : AppCompatActivity() {
         })
 
     }
+    //supaya klo dari payment page langsung ke update orderlist nya
+    override fun onRestart() {
+        super.onRestart()
+        recreate()
+    }
 }

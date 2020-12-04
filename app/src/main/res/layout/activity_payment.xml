@@ -44,6 +44,9 @@
             app:layout_constraintRight_toLeftOf="@id/dana"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginRight="20dp"
+            android:background="@drawable/button_logout"
+            android:backgroundTint="@color/royalblue"
+            android:textColor="@color/whitesmoke"
             android:text="OVO"
             />
 
@@ -55,6 +58,9 @@
             app:layout_constraintLeft_toRightOf="@id/ovo"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginLeft="20dp"
+            android:background="@drawable/button_logout"
+            android:backgroundTint="#44d254"
+            android:textColor="@color/whitesmoke"
             android:text="DANA"
             />
 
@@ -130,6 +136,10 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="90dp"
+        android:background="@drawable/button_logout"
+        android:backgroundTint="@color/royalblue"
+        android:textColor="@color/whitesmoke"
+        android:padding="20dp"
         android:text="Payment Complete"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

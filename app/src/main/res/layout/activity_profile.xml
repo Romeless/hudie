@@ -28,94 +28,60 @@
             android:clickable="true"
             >
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_margin="20dp"
-                android:layout_height="wrap_content"
-                app:hintAnimationEnabled="true"
-                >
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/profile_username"
-                    android:textColor="#444444"
-                    android:textColorHint="#777777"
-                    android:hint="User Name"
-                    />
 
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
+            <EditText
                 android:layout_width="match_parent"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="Full Name"
-                android:layout_margin="20dp"
                 android:layout_height="wrap_content"
-                app:hintAnimationEnabled="true"
-                >
-                <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/profile_username"
+                android:textColor="#444444"
+                android:textColorHint="#777777"
+                android:layout_margin="20dp"
+                android:text="Username"
+                android:hint="User Name"
+                />
+
+
+
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/profile_fullname"
                     android:textColor="#444444"
                     android:textColorHint="#777777"
-
+                    android:layout_margin="20dp"
                     />
 
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="E-Mail"
-                android:layout_margin="20dp"
-                android:layout_height="wrap_content"
-                app:hintAnimationEnabled="true"
-                >
-                <com.google.android.material.textfield.TextInputEditText
+
+
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/profile_email"
                     android:textColor="#444444"
                     android:textColorHint="#777777"
-
+                    android:layout_margin="20dp"
                     />
 
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="Address"
-                android:layout_margin="20dp"
-                android:layout_height="wrap_content"
-                app:hintAnimationEnabled="true"
-                >
-                <com.google.android.material.textfield.TextInputEditText
+
+
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/profile_address"
                     android:textColor="#444444"
                     android:textColorHint="#777777"
-
+                    android:layout_margin="20dp"
                     />
 
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="Phone Number"
-                android:layout_margin="20dp"
-                android:layout_height="wrap_content"
-                app:hintAnimationEnabled="true"
-                >
-                <com.google.android.material.textfield.TextInputEditText
+
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/profile_phone_number"
                     android:textColor="#444444"
                     android:textColorHint="#777777"
+                    android:layout_margin="20dp"
                     />
-
-            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:layout_marginTop="30dp"
@@ -124,6 +90,9 @@
                 android:id="@+id/profile_submit"
                 android:layout_gravity="left"
                 android:layout_margin="20dp"
+                android:background="@drawable/button_logout"
+                android:backgroundTint="@color/royalblue"
+                android:textColor="#ffffff"
                 android:text="SAVE"/>
 
         </LinearLayout>
